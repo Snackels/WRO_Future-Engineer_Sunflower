@@ -71,19 +71,19 @@ We chose this servo because it has 180 degree rotation that is perfect for rotat
 Ultra sonic help the robot to avoid the wall and the object by detecting the distance between the robot and obstacle.
 <br><br>
 
-- **7.4 voltage Lipo-Battery**: 7.4 voltage 2 cell Lipo-Battery.
+- **7.4 voltage Lipo-Battery** : 7.4 voltage 2 cell Lipo-Battery.
 <image src="https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/3e07fe06-67d6-42c9-b6bc-7b74ce8ed4a2.png" width = "400">
 
 The power source for our robot.
 <br><br>
 
-- **Controller**: Arduino UNO
+- **Controller** : Arduino UNO
 <image src= "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/dc87b47a-040f-46f3-abf0-2871e494e817.png" width = "400">
 
 This controller(Arduino UNO) is where we upload our program to robot it function as a brain of our robot.
 <br><br>
 
-- **Extension Board**: Arduino Sensor Shield V5.0 and Shield L298P Motor Driver with GPIO
+- **Extension Board** : Arduino Sensor Shield V5.0 and Shield L298P Motor Driver with GPIO
 
 (This is Sensor-Shield)
 
@@ -96,7 +96,7 @@ This controller(Arduino UNO) is where we upload our program to robot it function
 Both of the shield have the similar function which provide more port and allow our robot to use motor,sensor and battery. 
 <br><br>
 
-- **Light Sensor**: Blue light sensor from INEX, Red light sensor from Design By Sopon
+- **Light Sensor** : Blue light sensor from INEX, Red light sensor from Design By Sopon
 
 (blue sensor)
 
@@ -109,7 +109,7 @@ Both of the shield have the similar function which provide more port and allow o
 These light sensor is use to detect the line from the race field the reason for us to use two different color is that the robot can know the which line is red or blue.
 <br><br>
 
-- **GyroCompass** : gy-25
+- **GyroCompass** :gy-25
 
   <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/0a7b5f42-313d-4249-b86b-bdcaad4175f5.png" width = "400">
 
