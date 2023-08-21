@@ -109,11 +109,17 @@ Both of the shield have the similar function which provide more port and allow o
 These light sensor is use to detect the line from the race field the reason for us to use two different color is that the robot can know the which line is red or blue.
 <br><br>
 
-- **GyroCompass**: gy-25
+- **GyroCompass** : gy-25
 
   <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/0a7b5f42-313d-4249-b86b-bdcaad4175f5.png" width = "400">
 
 This component is for the robot to know which direction is it facing at the moment and it is use to tell which side the robot should turn.
 <br><br>
 
+- **Camera** :Pixy2.0
+
+  <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/ea42d632-7cc2-4c4f-b491-2879ae6f25ec.png" width = "400">
+
+The camera is use to detect the color block(obstacle) and send the signal to the robot what side it need to avoid the block like when it see red block it tell the robot it need to swirl right and when it see green it tell to swirl left side instead.   
+<br><br>
 ### Our robot wiring diagram 
