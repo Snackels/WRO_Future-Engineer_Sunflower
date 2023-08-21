@@ -96,4 +96,18 @@ This controller(Arduino UNO) is where we upload our program to robot it function
 Both of the shield have the similar function which provide more port and allow our robot to use motor,sensor and battery. 
 <br><br>
 
+- **Light Sensor**: Blue light sensor from INEX, Red light sensor from Design By Sopon
+
+(blue sensor)
+
+<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/a3c43af5-2394-4fa1-a570-c3f70362796d" width = "400">
+
+ (red sensor)
+ 
+<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/7d95f2e1-6022-42ff-a950-0a6c552934c9.png" width = "400">
+
+These light sensor is use to detect the line from the race field the reason for us to use two different color is that the robot can know the which line is red or blue.
+<br><br>
+
+- **GyroCompass**: gy-25
 ### Our robot wiring diagram 
