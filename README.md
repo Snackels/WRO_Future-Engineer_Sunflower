@@ -1,26 +1,63 @@
-Engineering materials
-====
+# The Documentation for WRO Future Engineer 2023
 
-This repository contains engineering materials of a self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2022.
 
-## Content
+![](https://lh3.googleusercontent.com/u/0/drive-viewer/AJc5JmS-gvzix8rqHiP9ptq7tHeZygsObiNOmIOgPZ77TDPFEsBTKvNW-LatH-ngLn_0nhACZ-FHElf1pMwIivX24kCyNMjfTw=w1920-h929)
 
-* `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members)
-* `v-photos` contains 6 photos of the vehicle (from every side, from top and bottom)
-* `video` contains the video.md file with the link to a video where driving demonstration exists
-* `schemes` contains one or several schematic diagrams in form of JPEG, PNG or PDF of the electromechanical components illustrating all the elements (electronic components and motors) used in the vehicle and how they connect to each other.
-* `src` contains code of control software for all components which were programmed to participate in the competition
-* `models` is for the files for models used by 3D printers, laser cutting machines and CNC machines to produce the vehicle elements. If there is nothing to add to this location, the directory can be removed.
-* `other` is for other files which can be used to understand how to prepare the vehicle for the competition. It may include documentation how to connect to a SBC/SBM and upload files there, datasets, hardware specifications, communication protocols descriptions etc. If there is nothing to add to this location, the directory can be removed.
 
-## Introduction
+<p align="center">
+  <img src="https://ybrobot.club/image/YB%20Robot%20logo.png" width="200"/>
+</p>
+<p align="center">
+<b>By Yothinburana School Robot Club</b>
+</p>
+<br><br><br><br>
 
-_This part must be filled by participants with the technical clarifications about the code: which modules the code consists of, how they are related to the electromechanical components of the vehicle, and what is the process to build/compile/upload the code to the vehicle’s controllers._
+## Our works (Youtube Links): 
 
-## How to prepare the repo based on the template
 
-_Remove this section before the first commit to the repository_
 
-1. Clone this repo by using the `git clone` functionality.
-2. Remove `.git` directory
-3. [Initialize a new public repository on GitHub](https://github.com/new) by following instructions from "create a new repository on the command line" section (appeared after pressing "Create repository" button).
+<br>
+
+
+### This Github repository contains:
+
+- Design process
+- Program explaination
+
+<br><br><br><br>
+
+# **Part 1: Robot design**
+
+### The Robot
+
+Designing a robot is difficult sometime. We need to design for every part we want to use and make it small , lightweight, fast, and effective.
+
+For this competition, There are rules about designing a robot, which contain a part that the vehicle must be a 4 wheeled vehicle with one driving axle and one steering actuator
+of any type. And the camera is highly recommended due to the mission.
+
+And the rules also said 
+
+The vehicle’s dimensions must not exceed 300x200 mm and 300 mm in height.
+The weight of the vehicle must not exceed 1.5 kilograms.
+
+<br>
+
+### Our robot components
+
+- **Driving motor** : Power functions L-motor made by LEGO.
+<image src="https://www.lego.com/cdn/cs/set/assets/blt3289051a0e80fa54/88003.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1" width = "400">
+A fast and very easy to use motor. Among all the motor we chose this one because it is fast enough and it is easy to attach to the robot fame.
+<br><br>
+
+- **Steering Servo** : GEEKSERVO-270  a 180 degree servo.
+<image src="https://thepihut.com/cdn/shop/products/geekservo-building-brick-180-rotation-block-servo-geekservo-104134-28717056917699_1000x.jpg?v=1646869335" width = "400">
+We chose this servo because it is easy to attach to robot fame and got the right degree we need to use which is 180 degree.
+<br><br>
+
+- **Servo** : GEEKSERVO building Brick Compatible 180 degree rotation servo.
+<image src="https://inex.co.th/home/wp-content/uploads/2020/11/KSERVO-270-0.jpg" width = "400">
+We chose this servo because it has 180 degree rotation that is perfect for rotating the **Ultra sonic sensor**.
+<br><br>
+
+- **Ultra sonic sensor** : Gravity URM 09 ultrasonic distance sensor.
+<image src="https://robotools.in/wp-content/uploads/2022/10/DFRobot-Gravity-URM09-Analog-Ultrasonic-Sensor-5-1-1200x900.jpg" width = "400">
