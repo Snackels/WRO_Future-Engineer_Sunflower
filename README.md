@@ -104,7 +104,7 @@ Both of the shield have the similar function which provide more port and allow o
 
  (red sensor)
  
-<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/7d95f2e1-6022-42ff-a950-0a6c552934c9.png" width = "400">
+<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/c3e92edd-0ece-4372-a2be-4aa417b8ce14.png" width = "400">
 
 These light sensor is use to detect the line from the race field the reason for us to use two different color is that the robot can know the which line is red or blue.
 <br><br>
