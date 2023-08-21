@@ -84,10 +84,12 @@ This controller(Arduino UNO) is where we upload our program to robot it function
 <br><br>
 
 - **Extension Board**: Arduino Sensor Shield V5.0 and Shield L298P Motor Driver with GPIO
+
 This is Sensor-Shield
 
 <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/7daea972-eb14-4f4b-a7fa-51d35aa0b2af.png" width = "400">
 
 This is Motor-Shield
+
 <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/86a15f9b-dd0d-4367-aeed-81c72b622e60.png" width = "400">
 
