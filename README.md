@@ -29,7 +29,7 @@
 
 <br><br><br><br>
 
-# **Part 1: Robot design**
+# **Part 1: Design process**
 
 ### The Robot
 
@@ -96,3 +96,4 @@ This controller(Arduino UNO) is where we upload our program to robot it function
 Both of the shield have the similar function which provide more port and allow our robot to use motor,sensor and battery. 
 <br><br>
 
+### Our robot wiring diagram 
