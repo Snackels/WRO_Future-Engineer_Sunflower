@@ -67,6 +67,6 @@ We chose this servo because it has 180 degree rotation that is perfect for rotat
 Ultra sonic help the robot to avoid the wall and the object by detecting the distance between the robot and obstacle.
 
 - **7.4 voltage Lipo-Battery**: 7.4 voltage 2 cell Lipo-Battery.
-<image src="https:![image](https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/330f2825-8b61-4635-ab2f-1e27a8bc0357)"
- width = "400">
+<image src="https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/3e07fe06-67d6-42c9-b6bc-7b74ce8ed4a2.png" width = "400">
+
  
