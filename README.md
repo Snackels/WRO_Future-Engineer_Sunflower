@@ -65,14 +65,17 @@ We chose this servo because it has 180 degree rotation that is perfect for rotat
 - **Ultra sonic sensor** : Gravity URM 09 ultrasonic distance sensor.
 <image src="https://robotools.in/wp-content/uploads/2022/10/DFRobot-Gravity-URM09-Analog-Ultrasonic-Sensor-5-1-1200x900.jpg" width = "400">
 Ultra sonic help the robot to avoid the wall and the object by detecting the distance between the robot and obstacle.
+<br><br>
 
 - **7.4 voltage Lipo-Battery**: 7.4 voltage 2 cell Lipo-Battery.
 <image src="https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/3e07fe06-67d6-42c9-b6bc-7b74ce8ed4a2.png" width = "400">
 The power source for our robot.
+<br><br>
 
 - **Controller**: Arduino UNO
 <image src= "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/dc87b47a-040f-46f3-abf0-2871e494e817.png" width = "400">
 This controller(Arduino UNO) is where we upload our program to robot it function as a brain of our robot.
+<br><br>
 
 - **Extension Board**: Arduino Sensor Shield V5.0 and Shield L298P Motor Driver with GPIO
 This is Sensor-Shield 
