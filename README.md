@@ -68,5 +68,15 @@ Ultra sonic help the robot to avoid the wall and the object by detecting the dis
 
 - **7.4 voltage Lipo-Battery**: 7.4 voltage 2 cell Lipo-Battery.
 <image src="https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/3e07fe06-67d6-42c9-b6bc-7b74ce8ed4a2.png" width = "400">
+The power source for our robot.
 
- 
+- **Controller**: Arduino UNO
+<image src= "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/dc87b47a-040f-46f3-abf0-2871e494e817.png" width = "400">
+This controller(Arduino UNO) is where we upload our program to robot it function as a brain of our robot.
+
+- **Extension Board**: Arduino Sensor Shield V5.0 and Shield L298P Motor Driver with GPIO
+This is Sensor-Shield 
+<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/7daea972-eb14-4f4b-a7fa-51d35aa0b2af.png" width = "400">
+This is Motor-Shield
+<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/86a15f9b-dd0d-4367-aeed-81c72b622e60.png" width = "400">
+
