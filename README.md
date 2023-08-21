@@ -66,7 +66,7 @@ We chose this servo because it has 180 degree rotation that is perfect for rotat
 <image src="https://robotools.in/wp-content/uploads/2022/10/DFRobot-Gravity-URM09-Analog-Ultrasonic-Sensor-5-1-1200x900.jpg" width = "400">
 Ultra sonic help the robot to avoid the wall and the object by detecting the distance between the robot and obstacle.
 
--**7.4 voltage Lipo-Battery**: 7.4 voltage 2 cell Lipo-Battery.
+- **7.4 voltage Lipo-Battery**: 7.4 voltage 2 cell Lipo-Battery.
 <image src="https:![image](https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/330f2825-8b61-4635-ab2f-1e27a8bc0357)"
  width = "400">
  
