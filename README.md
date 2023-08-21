@@ -93,5 +93,6 @@ This controller(Arduino UNO) is where we upload our program to robot it function
 
 <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/86a15f9b-dd0d-4367-aeed-81c72b622e60.png" width = "400">
 
-Both of the shield have the similar function which is provide more port and allow our robot to use motor,sensor and battery. 
+Both of the shield have the similar function which provide more port and allow our robot to use motor,sensor and battery. 
+<br><br>
 
