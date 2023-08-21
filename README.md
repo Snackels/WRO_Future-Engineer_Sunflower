@@ -110,4 +110,10 @@ These light sensor is use to detect the line from the race field the reason for 
 <br><br>
 
 - **GyroCompass**: gy-25
+
+  <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/0a7b5f42-313d-4249-b86b-bdcaad4175f5.png" width = "400">
+
+This component is for the robot to know which direction is it facing at the moment and it is use to tell which side the robot should turn.
+<br><br>
+
 ### Our robot wiring diagram 
