@@ -124,6 +124,7 @@ The camera is use to detect the color block(obstacle) and send the signal to the
 <br><br>
 ### Our robot wiring diagram 
 # **Part 2: Program explaination**
+
 ### Main_program_no_obstacles
 ### Function_no_obstacles
 ### Main_program_obstacles
