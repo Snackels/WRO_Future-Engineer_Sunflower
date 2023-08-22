@@ -133,7 +133,24 @@ The camera serves the purpose of identifying color blocks (obstacles) and transm
 ### Our robot wiring diagram 
 # **Part 3: Program explaination**
 
+To use the program we must install these program:
+- **[Arduino IDE 2.1.1]** : For Programming your Arduino UNO
+- **[Pixymon V2]** : For displaying and configuring your Pixy
+
+And these are require library:
+#include  "Mapf.h"
+
+#include  <Servo.h>
+
+#include  <PID_v2.h>
+
+#include  <Pixy2I2C.h>
+
+To install library, you can use library manager in **tools** bar in your Arduino application. But for Pixy library we must download from this website : https://pixycam.com/downloads-pixy2/
+Library is require to be able to communicate with servo, sensor, or even some functions.
+
 ### Main_program_no_obstacles
+https://github.com/Snackels/WRO_Future-Engineer/blob/main/scr/no%20obstacle/Main_no_obj.ino
 ### Function_no_obstacles
 ### Main_program_obstacles
 ### Function_obstacles
