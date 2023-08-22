@@ -154,10 +154,16 @@ Library is require to be able to communicate with servo, sensor, or even some fu
 
 ### Main_program_no_obstacles
 https://github.com/Snackels/WRO_Future-Engineer/blob/main/scr/no%20obstacle/Main_no_obj.ino
+We will use the ultra sonic sensor to calculate the distance of robot and the wall to not be too close or too far
 
 ### Function_no_obstacles
 https://github.com/Snackels/WRO_Future-Engineer/blob/main/scr/no%20obstacle/function.ino
+The robot will keep on the range with the wall by calculating gyro sensor to steering degree and it will make the robot maintain distance with the wall with PID for short or Proportional Integral Derivative.
+
 ### Main_program_obstacles
 https://github.com/Snackels/WRO_Future-Engineer/blob/main/scr/obstacle/Main_obj.ino
+We use camera, gyro, and ultrasonic to calculate the steering degree.
+
 ### Function_obstacles
 https://github.com/Snackels/WRO_Future-Engineer/blob/main/scr/obstacle/function.ino
+The robot will still use PID but it will add the avoidance degree.
