@@ -1,4 +1,5 @@
-# The Documentation for WRO Future Engineer 2023
+# The best of the best Documentation for WRO Future Engineer 2023 in the entire multiverse 😆😆
+by Team *YBR-GPA4.0* (The name was inspired by our first letter of our nickname, So it G stand for Gain, A stand for Atom, and we think that it will sound better if we add P so its mean Grade per attitude.)
 
 
 ![](https://lh3.googleusercontent.com/u/0/drive-viewer/AJc5JmS-gvzix8rqHiP9ptq7tHeZygsObiNOmIOgPZ77TDPFEsBTKvNW-LatH-ngLn_0nhACZ-FHElf1pMwIivX24kCyNMjfTw=w1920-h929)
@@ -29,34 +30,41 @@
 
 <br><br><br><br>
 
-# **Part 1: Design process**
+# **Part 1: About our team**
+This team include 2 member. 
+
+1st member is Mr.Vorawet Narkglom ,15 years old, who is grade 10 and study at Yothinburana School English Program. The main programmer and the mechanic of our team
+2nd member is Mr.Vichaiwat Koonsap ,15 years old, a grade 10 and currently studying at Yothinburana School in the Regular Program. The co-Programmer and the main mechanic of our team.
+
+We both had been participating a lot of competition in Thailand and in the International stage.
+
+# **Part 2: Design process**
 
 ### The Robot
 
-Designing a robot is difficult sometime. We need to design for every part we want to use and make it small , lightweight, fast, and effective.
+Designing a robot is sometimes difficult. We need to design every part we intend to use, making it small, lightweight, fast, and effective. If it's too heavy, the robot will be slower. If it's too big, evading obstacles will be challenging. If it's ineffective, it won't be able to detect walls, obstacles, or walk properly. That's why we need to balance the robot, keeping it not too heavy, small, and fast to accomplish its mission.
 
-For this competition, There are rules about designing a robot, which contain a part that the vehicle must be a 4 wheeled vehicle with one driving axle and one steering actuator
-of any type. And the camera is highly recommended due to the mission.
+For this competition, there are rules regarding robot design, which include a requirement that the vehicle must be a four-wheeled vehicle with one driving axle and one steering actuator of any type. The use of a camera is highly recommended due to the mission's nature.
 
-And the rules also said 
+Additionally, the rules also said that:
 
-The vehicle’s dimensions must not exceed 300x200 mm and 300 mm in height.
+The vehicle's dimensions must not exceed 300x200 mm, with a height limit of 300 mm.
 The weight of the vehicle must not exceed 1.5 kilograms.
 
 <br>
 
 ### Our robot components
 
-- **Driving motor** : Power functions L-motor made by LEGO.
+- **Driving motor** : Power functions Large-motor made by LEGO™.
 <image src="https://www.lego.com/cdn/cs/set/assets/blt3289051a0e80fa54/88003.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1" width = "400">
 
-A fast and very easy to use motor. Among all the motor we chose this one because it is fast enough and it is easy to attach to the robot fame.
+A fast and incredibly user-friendly motor. Just a few minutes of soldering the wires, and we are ready to use it. Among all the motors, we chose this one because it is neither too fast nor too slow, and it is quite easy to attach to the robot frame. It can be adjusted for Lego and Arduino by soldering.
 <br><br>
 
 - **Steering Servo** : GEEKSERVO-270  a 180 degree servo.
 <image src="https://thepihut.com/cdn/shop/products/geekservo-building-brick-180-rotation-block-servo-geekservo-104134-28717056917699_1000x.jpg?v=1646869335" width = "400">
 
-We chose this servo because it is easy to attach to  our robot fame and got the right degree we needed to use which is 180 degree.
+We chose this servo because it is pretty easy to attach to our robot frame and got the right degree we needed to use for steering which is 180 degree.
 <br><br>
 
 - **Servo** : GEEKSERVO building Brick Compatible 180 degree rotation servo.
@@ -74,7 +82,7 @@ The ultrasonic sensor plays a crucial role in guiding the robot's navigation by 
 - **7.4 voltage Lipo-Battery** : 7.4 voltage 2 cell Lipo-Battery.
 <image src="https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/3e07fe06-67d6-42c9-b6bc-7b74ce8ed4a2.png" width = "400">
 
-The power source for our robot.
+The power source for our robot. This battery is the Lithium Polymer type, normally we use at 8.3 and recharge at 7.2 to save the battery life and for safety
 <br><br>
 
 - **Controller** : Arduino UNO
@@ -120,10 +128,10 @@ This component equips the robot with the ability to discern its current orientat
 
   <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/ea42d632-7cc2-4c4f-b491-2879ae6f25ec.png" width = "400">
 
-The camera serves the purpose of identifying color blocks (obstacles) and transmitting corresponding signals to the robot. For instance, upon detecting a red block, it instructs the robot to veer to the right. Conversely, when a green block is detected, it signals the robot to navigate towards the left.
+The camera serves the purpose of identifying color blocks (obstacles) and transmitting corresponding signals to the robot. For instance, upon detecting a red block, it instructs the robot to veer to the right. Conversely, when a green block is detected, it signals the robot to navigate towards the left, but if it doesn't detect any color it will go forward. 
 <br><br>
 ### Our robot wiring diagram 
-# **Part 2: Program explaination**
+# **Part 3: Program explaination**
 
 ### Main_program_no_obstacles
 ### Function_no_obstacles
