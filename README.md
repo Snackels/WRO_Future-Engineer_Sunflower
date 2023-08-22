@@ -68,7 +68,7 @@ We chose this servo because it has 180 degree rotation that is perfect for rotat
 - **Ultra sonic sensor** : Gravity URM 09 ultrasonic distance sensor.
 <image src="https://robotools.in/wp-content/uploads/2022/10/DFRobot-Gravity-URM09-Analog-Ultrasonic-Sensor-5-1-1200x900.jpg" width = "400">
 
-Ultra sonic help the robot to avoid the wall and the object by detecting the distance between the robot and obstacle.
+The ultrasonic sensor plays a crucial role in guiding the robot's navigation by detecting distances between the robot and obstacles. This enables the robot to skillfully avoid walls in its path.
 <br><br>
 
 - **7.4 voltage Lipo-Battery** : 7.4 voltage 2 cell Lipo-Battery.
@@ -80,7 +80,7 @@ The power source for our robot.
 - **Controller** : Arduino UNO
 <image src= "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/dc87b47a-040f-46f3-abf0-2871e494e817.png" width = "400">
 
-This controller(Arduino UNO) is where we upload our program to robot it function as a brain of our robot.
+The Arduino UNO controller acts as the pivotal point where we upload our robot's program, effectively functioning as the brain of our creation
 <br><br>
 
 - **Extension Board** : Arduino Sensor Shield V5.0 and Shield L298P Motor Driver with GPIO
@@ -93,7 +93,7 @@ This controller(Arduino UNO) is where we upload our program to robot it function
 
 <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/86a15f9b-dd0d-4367-aeed-81c72b622e60.png" width = "400">
 
-Both of the shield have the similar function which provide more port and allow our robot to use motor,sensor and battery. 
+Both of these shields serve a similar purpose by offering additional ports that enable our robot to connect with motors, sensors, and batteries. 
 <br><br>
 
 - **Light Sensor** : Blue light sensor from INEX, Red light sensor from Design By Sopon
@@ -106,21 +106,21 @@ Both of the shield have the similar function which provide more port and allow o
  
 <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/c3e92edd-0ece-4372-a2be-4aa417b8ce14.png" width = "400">
 
-These light sensor is use to detect the line from the race field the reason for us to use two different color is that the robot can know the which line is red or blue.
+Light sensors play a crucial role in helping robots know where to stop and give order to other component. But what's interesting is that we use two different colors for these lines: red and blue. This choice lets the robot not only see the lines but also figure out whether they are red or blue. This extra bit of information helps the robot know how many times it have orbit around the race field, making it smarter and better equipped for the race.
 <br><br>
 
 - **GyroCompass** :gy-25
 
   <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/0a7b5f42-313d-4249-b86b-bdcaad4175f5.png" width = "400">
 
-This component is for the robot to know which direction is it facing at the moment and it is use to tell which side the robot should turn.
+This component equips the robot with the ability to discern its current orientation, thereby enabling it to determine the appropriate direction for turning.
 <br><br>
 
 - **Camera** :Pixy2.0
 
   <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/ea42d632-7cc2-4c4f-b491-2879ae6f25ec.png" width = "400">
 
-The camera is use to detect the color block(obstacle) and send the signal to the robot what side it need to avoid the block like when it see red block it tell the robot it need to swirl right and when it see green it tell to swirl left side instead.   
+The camera serves the purpose of identifying color blocks (obstacles) and transmitting corresponding signals to the robot. For instance, upon detecting a red block, it instructs the robot to veer to the right. Conversely, when a green block is detected, it signals the robot to navigate towards the left.
 <br><br>
 ### Our robot wiring diagram 
 # **Part 2: Program explaination**
