@@ -82,13 +82,13 @@ The ultrasonic sensor plays a crucial role in guiding the robot's navigation by 
 <br><br>
 
 - **7.4 voltage Lipo-Battery** : 7.4 voltage 2 cell Lipo-Battery.
-<image src="https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/3e07fe06-67d6-42c9-b6bc-7b74ce8ed4a2.png" width = "400">
+<image src="https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/4b0e6cb0-ba45-4377-bb51-b34038d68638.png" width = "400">
 
 The power source for our robot. This battery is the Lithium Polymer type, normally we use at 8.3 and recharge at 7.2 to save the battery life and for safety
 <br><br>
 
 - **Controller** : Arduino UNO
-<image src= "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/dc87b47a-040f-46f3-abf0-2871e494e817.png" width = "400">
+<image src= "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/1aa8ad01-aed2-400d-bedc-cf12a5509554.png" width = "400">
 
 The Arduino UNO controller acts as the pivotal point where we upload our robot's program, effectively functioning as the brain of our creation
 <br><br>
@@ -114,7 +114,7 @@ Both of these shields serve a similar purpose by offering additional ports that 
 
  (red sensor)
  
-<image src = "![image](https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/b7f66634-942b-4f5c-b01d-777ba5d78d62)" width = "400">
+<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/b7f66634-942b-4f5c-b01d-777ba5d78d62.png" width = "400">
 
 Light sensors play a crucial role in helping robots know where to stop and give order to other component. But what's interesting is that we use two different colors for these lines: red and blue. This choice lets the robot not only see the lines but also figure out whether they are red or blue. This extra bit of information helps the robot know how many times it have orbit around the race field, making it smarter and better equipped for the race.
 <br><br>
