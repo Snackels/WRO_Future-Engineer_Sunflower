@@ -110,18 +110,18 @@ Both of these shields serve a similar purpose by offering additional ports that 
 
 (blue sensor)
 
-<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/a3c43af5-2394-4fa1-a570-c3f70362796d.png" width = "400">
+<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/950eeb1d-ead4-4641-aa64-07414d3dd939.png" width = "400">
 
  (red sensor)
  
-<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/c3e92edd-0ece-4372-a2be-4aa417b8ce14.png" width = "400">
+<image src = "![image](https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/b7f66634-942b-4f5c-b01d-777ba5d78d62)" width = "400">
 
 Light sensors play a crucial role in helping robots know where to stop and give order to other component. But what's interesting is that we use two different colors for these lines: red and blue. This choice lets the robot not only see the lines but also figure out whether they are red or blue. This extra bit of information helps the robot know how many times it have orbit around the race field, making it smarter and better equipped for the race.
 <br><br>
 
 - **GyroCompass** :gy-25
 
-  <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/c3143af5-5f77-46b6-a052-320557918a09.png" width = "400">
+  <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/ed4a0af9-6420-498d-9d8f-a17c8bb455b0.png" width = "400">
 
 This component equips the robot with the ability to discern its current orientation, thereby enabling it to determine the appropriate direction for turning.
 <br><br>
