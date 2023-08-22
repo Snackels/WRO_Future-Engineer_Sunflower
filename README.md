@@ -14,7 +14,7 @@ by Team *YBR-GPA4.0* (The name was inspired by our first letter of our nickname,
 <br><br><br><br>
 
 ## Our works (Youtube Links): 
-
+https://youtu.be/MBe6ZsyGE-E
 
 
 <br>
@@ -40,8 +40,8 @@ This team include 2 member.
 
 We both had been participating a lot of competition in Thailand and in the International stage.
 
-# **Part 2: Design process**
 
+# **Part 2: Design process**
 ### The Robot
 
 Designing a robot is sometimes difficult. We need to design every part we intend to use, making it small, lightweight, fast, and effective. If it's too heavy, the robot will be slower. If it's too big, evading obstacles will take a lot of space. If it's ineffective, it won't be able to detect walls, obstacles, or walk properly. That's why we need to balance the robot, keeping it not too heavy, small, and fast to accomplish its mission.
