@@ -97,11 +97,11 @@ The Arduino UNO controller acts as the pivotal point where we upload our robot's
 
 (This is Sensor-Shield)
 
-<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/7daea972-eb14-4f4b-a7fa-51d35aa0b2af.png" width = "400">
+<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/8bca8501-e413-4c90-b3cd-c1d8a952c01f.png" width = "400">
 
 (This is Motor-Shield)
 
-<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/86a15f9b-dd0d-4367-aeed-81c72b622e60.png" width = "400">
+<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/a4035997-f954-492f-9825-8ec2eba8713b.png" width = "400">
 
 Both of these shields serve a similar purpose by offering additional ports that enable our robot to connect with motors, sensors, and batteries. 
 <br><br>
@@ -110,7 +110,7 @@ Both of these shields serve a similar purpose by offering additional ports that 
 
 (blue sensor)
 
-<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/a3c43af5-2394-4fa1-a570-c3f70362796d" width = "400">
+<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/a3c43af5-2394-4fa1-a570-c3f70362796d.png" width = "400">
 
  (red sensor)
  
@@ -121,7 +121,7 @@ Light sensors play a crucial role in helping robots know where to stop and give 
 
 - **GyroCompass** :gy-25
 
-  <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/0a7b5f42-313d-4249-b86b-bdcaad4175f5.png" width = "400">
+  <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/c3143af5-5f77-46b6-a052-320557918a09.png" width = "400">
 
 This component equips the robot with the ability to discern its current orientation, thereby enabling it to determine the appropriate direction for turning.
 <br><br>
