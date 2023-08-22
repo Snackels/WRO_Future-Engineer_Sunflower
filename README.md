@@ -34,7 +34,9 @@ by Team *YBR-GPA4.0* (The name was inspired by our first letter of our nickname,
 This team include 2 member. 
 
 1st member is Mr.Vorawet Narkglom ,15 years old, who is grade 10 and study at Yothinburana School English Program. The main programmer and the mechanic of our team
+
 2nd member is Mr.Vichaiwat Koonsap ,15 years old, a grade 10 and currently studying at Yothinburana School in the Regular Program. The co-Programmer and the main mechanic of our team.
+
 
 We both had been participating a lot of competition in Thailand and in the International stage.
 
