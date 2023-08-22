@@ -42,7 +42,7 @@ We both had been participating a lot of competition in Thailand and in the Inter
 
 ### The Robot
 
-Designing a robot is sometimes difficult. We need to design every part we intend to use, making it small, lightweight, fast, and effective. If it's too heavy, the robot will be slower. If it's too big, evading obstacles will be challenging. If it's ineffective, it won't be able to detect walls, obstacles, or walk properly. That's why we need to balance the robot, keeping it not too heavy, small, and fast to accomplish its mission.
+Designing a robot is sometimes difficult. We need to design every part we intend to use, making it small, lightweight, fast, and effective. If it's too heavy, the robot will be slower. If it's too big, evading obstacles will take a lot of space. If it's ineffective, it won't be able to detect walls, obstacles, or walk properly. That's why we need to balance the robot, keeping it not too heavy, small, and fast to accomplish its mission.
 
 For this competition, there are rules regarding robot design, which include a requirement that the vehicle must be a four-wheeled vehicle with one driving axle and one steering actuator of any type. The use of a camera is highly recommended due to the mission's nature.
 
@@ -76,7 +76,7 @@ We chose this servo because it has 180 degree rotation that is perfect for rotat
 - **Ultra sonic sensor** : Gravity URM 09 ultrasonic distance sensor.
 <image src="https://robotools.in/wp-content/uploads/2022/10/DFRobot-Gravity-URM09-Analog-Ultrasonic-Sensor-5-1-1200x900.jpg" width = "400">
 
-The ultrasonic sensor plays a crucial role in guiding the robot's navigation by detecting distances between the robot and obstacles. This enables the robot to skillfully avoid walls in its path.
+The ultrasonic sensor plays a crucial role in guiding the robot's navigation by detecting distances between the robot and obstacles. This enables the robot to skillfully avoid walls in its path. But to use the sensor we need to attach at the right position not too high and make it right turning degree
 <br><br>
 
 - **7.4 voltage Lipo-Battery** : 7.4 voltage 2 cell Lipo-Battery.
