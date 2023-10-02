@@ -30,11 +30,11 @@ https://youtu.be/MBe6ZsyGE-E
 # **Part 1: About our team.**
 *YBR-Sunflower* is a team of three. All the team members are students at Yothinburana School. 
 Here are team members.
-1. Vorawet Narkglom, 15 years old,
+1. Vorawet Narkglom, 15 years old, main programmer.
 
-2. Sakolnat
+2. Sakolnat Raktaengan, 15 years old, robot designer.
 
-3. Vichaiwat Koonsap
+3. Vichaiwat Koonsap, 15 years old, document designer.
 # **Part 2: Robot design.**
 ### The Robot
 
@@ -83,7 +83,7 @@ We chose this servo because it is pretty easy to attach to our robot frame and g
 
 The ultrasonic sensor plays a crucial role in guiding the robot's navigation by detecting distances between the robot and obstacles. This enables the robot to skillfully avoid walls in its path. But to use the sensor we need to attach at the right position not too high and make it right turning degree
 
-Specification
+## Specification
 - Supply Voltage: 3.3~5.5V DC
 - Operating Current: 20mA
 - Operating Temperature Range:  -10℃～＋70℃
@@ -98,7 +98,7 @@ Specification
 
 The power source for our robot. This battery is the Lithium Polymer type, normally we use at 8.3 and recharge at 7.2 to save the battery life and for safety
 
-Specification
+## Specification
 - 2 cells voltage: 7.4V
 - Capacity: 1100mAh 30C
 - Can be charged at a current of up to 5 times the capacity (5C)
@@ -123,6 +123,12 @@ Light sensors play a crucial role in helping robots know where to stop and give 
   <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/ed4a0af9-6420-498d-9d8f-a17c8bb455b0.png" width = "400">
 
 This component equips the robot with the ability to discern its current orientation, thereby enabling it to determine the appropriate direction for turning.
+
+## Specification
+- Measuring range of axes: -180 to +180 degrees
+- Resolution: 0.01 degrees Frequency Response: 100HZ (115200bps)
+- Operating Current: 15 mA
+- Operating Temperature: -20 to 85 °C
 <br><br>
 
 - **Camera** :Pixy2.0
@@ -130,12 +136,24 @@ This component equips the robot with the ability to discern its current orientat
   <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/bf7a29f9-a2cf-4b85-a056-3f12b4e75966.png" width = "400">
 
 The camera serves the purpose of identifying color blocks (obstacles) and transmitting corresponding signals to the robot. For instance, upon detecting a red block, it instructs the robot to veer to the right. Conversely, when a green block is detected, it signals the robot to navigate towards the left, but if it doesn't detect any color it will go forward. 
+
+## Specification
+- Resolution : 1296 x 976
+- Processor: NXP LPC4330
+- Cloak speed : 204 MHz
+- Ram : 264KB
+- Flash : 2 MB
+- Framerate : 60 fps
+- Connection : USB, UART, SPI, I²C
 <br><br>
 
 - **Controller** :POP-32 , a 32bit controller
 <image src = "https://github.com/LEST0808/LEST0808/blob/main/POP32.png" width = "400">
 
 This controller is 32bit which make the reaction time faster, more accurate, better multitasking, and etc.
+
+## Specification
+
 ### Our robot wiring diagram 
 # **Part 3: Program explaination**
 
