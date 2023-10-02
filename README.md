@@ -55,24 +55,54 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 <image src="https://www.lego.com/cdn/cs/set/assets/blt3289051a0e80fa54/88003.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1" width = "400">
 
 A fast and incredibly user-friendly motor. Just a few minutes of soldering the wires, and we are ready to use it. Among all the motors, we chose this one because it is neither too fast nor too slow, and it is quite easy to attach to the robot frame. It can be adjusted for Lego and Arduino by soldering.
+
+## Specification
+- Speed : 380 rpm
+- Maximum torque : 40 Ncm
+- Voltage : 9 v
+
 <br><br>
 
 - **Servo** : GEEKSERVO-270  a 180 degree servo.
 <image src="https://thepihut.com/cdn/shop/products/geekservo-building-brick-180-rotation-block-servo-geekservo-104134-28717056917699_1000x.jpg?v=1646869335" width = "400">
 
 We chose this servo because it is pretty easy to attach to our robot frame and got the right degree we needed to use for steering and ultrasonic which is 180 degree.
+
+## Specification
+- Working voltage: 3.3V~6V
+- Rated voltage: 4.8V
+- Rated current: 200ma
+- Stall current: 700ma
+- Sliding current: 450ma
+- Maximum torque: 500g.cm
+- Angle speed: 60°/0.12s
 <br><br>
 
 - **Ultra sonic sensor** : Gravity URM 09 ultrasonic distance sensor.
 <image src="https://robotools.in/wp-content/uploads/2022/10/DFRobot-Gravity-URM09-Analog-Ultrasonic-Sensor-5-1-1200x900.jpg" width = "400">
 
 The ultrasonic sensor plays a crucial role in guiding the robot's navigation by detecting distances between the robot and obstacles. This enables the robot to skillfully avoid walls in its path. But to use the sensor we need to attach at the right position not too high and make it right turning degree
+
+Specification
+- Supply Voltage: 3.3~5.5V DC
+- Operating Current: 20mA
+- Operating Temperature Range:  -10℃～＋70℃
+- Measurement Range: 2cm～500cm (can be set)
+- Resolution: 1cm
+- Accuracy: 1%
+- Frequency: 50Hz Max
 <br><br>
 
 - **7.4 voltage Lipo-Battery** : 7.4 voltage 2 cell Lipo-Battery.
 <image src="https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/4b0e6cb0-ba45-4377-bb51-b34038d68638.png" width = "400">
 
 The power source for our robot. This battery is the Lithium Polymer type, normally we use at 8.3 and recharge at 7.2 to save the battery life and for safety
+
+Specification
+- 2 cells voltage: 7.4V
+- Capacity: 1100mAh 30C
+- Can be charged at a current of up to 5 times the capacity (5C)
+- Connectors are in a JST type that can be easily disconnected.
 <br><br>
 
 - **Light Sensor** : Blue light sensor from INEX, Red light sensor from Design By Sopon
@@ -102,9 +132,10 @@ This component equips the robot with the ability to discern its current orientat
 The camera serves the purpose of identifying color blocks (obstacles) and transmitting corresponding signals to the robot. For instance, upon detecting a red block, it instructs the robot to veer to the right. Conversely, when a green block is detected, it signals the robot to navigate towards the left, but if it doesn't detect any color it will go forward. 
 <br><br>
 
--**Controller** :POP-32+
-<image src = "
+- **Controller** :POP-32 , a 32bit controller
+<image src = "https://github.com/LEST0808/LEST0808/blob/main/POP32.png" width = "400">
 
+This controller is 32bit which make the reaction time faster, more accurate, better multitasking, and etc.
 ### Our robot wiring diagram 
 # **Part 3: Program explaination**
 
