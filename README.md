@@ -21,27 +21,21 @@ https://youtu.be/MBe6ZsyGE-E
 
 
 ### This Github repository contains:
-
+- Team information
 - Design process
 - Program explaination
-- Team photos
-- Vehicle photos
-- Link to our work
 
 <br><br><br><br>
 
-# **Part 1: About our team**
-This team include 2 member. 
+# **Part 1: About our team.**
+*YBR-Sunflower* is a team of three. All the team members are students at Yothinburana School. 
+Here are team members.
+1. Vorawet Narkglom, 15 years old,
 
-1st member is Mr.Vorawet Narkglom ,15 years old, who is grade 10 and study at Yothinburana School English Program. The main programmer and the mechanic of our team
+2. Sakolnat
 
-2nd member is Mr.Vichaiwat Koonsap ,15 years old, a grade 10 and currently studying at Yothinburana School in the Regular Program. The co-Programmer and the main mechanic of our team.
-
-
-We both had been participating a lot of competition in Thailand and in the International stage.
-
-
-# **Part 2: Design process**
+3. Vichaiwat Koonsap
+# **Part 2: Robot design.**
 ### The Robot
 
 Designing a robot is sometimes difficult. We need to design every part we intend to use, making it small, lightweight, fast, and effective. If it's too heavy, the robot will be slower. If it's too big, evading obstacles will take a lot of space. If it's ineffective, it won't be able to detect walls, obstacles, or walk properly. That's why we need to balance the robot, keeping it not too heavy, small, and fast to accomplish its mission.
@@ -63,16 +57,10 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 A fast and incredibly user-friendly motor. Just a few minutes of soldering the wires, and we are ready to use it. Among all the motors, we chose this one because it is neither too fast nor too slow, and it is quite easy to attach to the robot frame. It can be adjusted for Lego and Arduino by soldering.
 <br><br>
 
-- **Steering Servo** : GEEKSERVO-270  a 180 degree servo.
+- **Servo** : GEEKSERVO-270  a 180 degree servo.
 <image src="https://thepihut.com/cdn/shop/products/geekservo-building-brick-180-rotation-block-servo-geekservo-104134-28717056917699_1000x.jpg?v=1646869335" width = "400">
 
-We chose this servo because it is pretty easy to attach to our robot frame and got the right degree we needed to use for steering which is 180 degree.
-<br><br>
-
-- **Servo** : GEEKSERVO building Brick Compatible 180 degree rotation servo.
-<image src="https://inex.co.th/home/wp-content/uploads/2020/11/KSERVO-270-0.jpg" width = "400">
-
-We chose this servo because it has 180 degree rotation that is perfect for rotating the **Ultra sonic sensor** and it fit perfectly in our robot.
+We chose this servo because it is pretty easy to attach to our robot frame and got the right degree we needed to use for steering and ultrasonic which is 180 degree.
 <br><br>
 
 - **Ultra sonic sensor** : Gravity URM 09 ultrasonic distance sensor.
@@ -85,25 +73,6 @@ The ultrasonic sensor plays a crucial role in guiding the robot's navigation by 
 <image src="https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/4b0e6cb0-ba45-4377-bb51-b34038d68638.png" width = "400">
 
 The power source for our robot. This battery is the Lithium Polymer type, normally we use at 8.3 and recharge at 7.2 to save the battery life and for safety
-<br><br>
-
-- **Controller** : Arduino UNO
-<image src= "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/1aa8ad01-aed2-400d-bedc-cf12a5509554.png" width = "400">
-
-The Arduino UNO controller acts as the pivotal point where we upload our robot's program, effectively functioning as the brain of our creation
-<br><br>
-
-- **Extension Board** : Arduino Sensor Shield V5.0 and Shield L298P Motor Driver with GPIO
-
-(This is Sensor-Shield)
-
-<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/8bca8501-e413-4c90-b3cd-c1d8a952c01f.png" width = "400">
-
-(This is Motor-Shield)
-
-<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/a4035997-f954-492f-9825-8ec2eba8713b.png" width = "400">
-
-Both of these shields serve a similar purpose by offering additional ports that enable our robot to connect with motors, sensors, and batteries. 
 <br><br>
 
 - **Light Sensor** : Blue light sensor from INEX, Red light sensor from Design By Sopon
@@ -119,7 +88,7 @@ Both of these shields serve a similar purpose by offering additional ports that 
 Light sensors play a crucial role in helping robots know where to stop and give order to other component. But what's interesting is that we use two different colors for these lines: red and blue. This choice lets the robot not only see the lines but also figure out whether they are red or blue. This extra bit of information helps the robot know how many times it have orbit around the race field, making it smarter and better equipped for the race.
 <br><br>
 
-- **GyroCompass** :gy-25
+- **GyroCompass** :GY-25
 
   <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/ed4a0af9-6420-498d-9d8f-a17c8bb455b0.png" width = "400">
 
@@ -132,6 +101,10 @@ This component equips the robot with the ability to discern its current orientat
 
 The camera serves the purpose of identifying color blocks (obstacles) and transmitting corresponding signals to the robot. For instance, upon detecting a red block, it instructs the robot to veer to the right. Conversely, when a green block is detected, it signals the robot to navigate towards the left, but if it doesn't detect any color it will go forward. 
 <br><br>
+
+-**Controller** :POP-32+
+<image src = "
+
 ### Our robot wiring diagram 
 # **Part 3: Program explaination**
 
