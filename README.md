@@ -52,7 +52,7 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 ### Our robot components
 
 - ## **Driving motor** : Power functions Large-motor made by LEGO™.
-<image src="https://www.lego.com/cdn/cs/set/assets/blt3289051a0e80fa54/88003.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1" width = "400">
+<image src="https://ae01.alicdn.com/kf/Sc4433b091f32440e8094b8ab8c003eacI/2pcs-Enhanced-Red-L-Servo-Motor-Compatible-With-Legoeds-Power-Functions-MOC-Parts-Building-Blocks.jpg" width = "400">
 
 A fast and incredibly user-friendly motor. Just a few minutes of soldering the wires, and we are ready to use it. Among all the motors, we chose this one because it is neither too fast nor too slow, and it is quite easy to attach to the robot frame. It can be adjusted for Lego and Arduino by soldering.
 
