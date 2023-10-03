@@ -191,35 +191,3 @@ This controller is 32bit which make the reaction time faster, more accurate, bet
 ### Our robot wiring diagram 
 # **Part 3: Program explaination**
 
-To use the program we must install these program:
-- **[Arduino IDE 2.1.1]** : For Programming your Arduino UNO
-- **[Pixymon V2]** : For displaying and configuring your Pixy
-
-And these are require library:                                                  
-
-#include  "Mapf.h"
-
-#include  <Servo.h>
-
-#include  <PID_v2.h>
-
-#include  <Pixy2I2C.h>
-
-To install library, you can use library manager in **tools** bar in your Arduino application. But for Pixy library we must download from this website : https://pixycam.com/downloads-pixy2/
-Library is require to be able to communicate with servo, sensor, or even some functions.
-
-### Main_program_no_obstacles
-https://github.com/Snackels/WRO_Future-Engineer/blob/main/scr/no%20obstacle/Main_no_obj.ino
-We will use the ultra sonic sensor to calculate the distance of robot and the wall to not be too close or too far
-
-### Function_no_obstacles
-https://github.com/Snackels/WRO_Future-Engineer/blob/main/scr/no%20obstacle/function.ino
-The robot will keep on the range with the wall by calculating gyro sensor to steering degree and it will make the robot maintain distance with the wall with PID for short or Proportional Integral Derivative.
-
-### Main_program_obstacles
-https://github.com/Snackels/WRO_Future-Engineer/blob/main/scr/obstacle/Main_obj.ino
-We use camera, gyro, and ultrasonic to calculate the steering degree.
-
-### Function_obstacles
-https://github.com/Snackels/WRO_Future-Engineer/blob/main/scr/obstacle/function.ino
-The robot will still use PID but it will add the avoidance degree.
