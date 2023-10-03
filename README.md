@@ -148,7 +148,7 @@ The camera serves the purpose of identifying color blocks (obstacles) and transm
 <br><br>
 
 - ## **Controller** :POP-32 , a 32bit controller
-<image src = "https://github.com/LEST0808/LEST0808/blob/main/POP32.png" width = "400">
+<image src = "https://github.com/LEST0808/POP32ph/blob/main/POP32%20(1).png?raw=true" width = "400">
 
 This controller is 32bit which make the reaction time faster, more accurate, better multitasking, and etc.
 
