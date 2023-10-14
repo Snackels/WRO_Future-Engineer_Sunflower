@@ -105,15 +105,7 @@ This Lithium Polymer battery is the power source for our robot. We typically use
 - Connectors are in a JST type that can be easily disconnected.
 <br><br>
 
-- ## **Light Sensor** : Blue light sensor from INEX, Red light sensor from Design By Sopon
-
-(blue sensor)
-
-<image src = "https://github.com/Snackels/WRO_Future-Engineer_Sunflower/assets/92850241/8694c60f-f4d4-4856-9a16-9c467e8f3677.png
-" width = "400">
-
- (red sensor)
- 
+- ## **Light Sensor** : Virus III by Design By Sopon
 <image src = "https://github.com/Snackels/WRO_Future-Engineer_Sunflower/assets/92850241/c5e46679-3c1e-49af-be01-14741f34a90c.png" width = "400">
 
 Light sensors are crucial for robots to navigate and give orders to other components. To make this process more efficient, two different colors, red and blue, are used for these lines. This color choice enables the robot to not just detect the lines but also distinguish between red and blue lines. This additional information helps the robot determine the number of laps it has completed around the race field, making it smarter and better equipped to compete in the race.
