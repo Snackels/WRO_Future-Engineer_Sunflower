@@ -109,12 +109,11 @@ This Lithium Polymer battery is the power source for our robot. We typically use
 
 (blue sensor)
 
-<image src = "![image](https://github.com/Snackels/WRO_Future-Engineer_Sunflower/assets/92850241/c5e46679-3c1e-49af-be01-14741f34a90c)
-" width = "400">
+<image src = "" width = "400">
 
  (red sensor)
  
-<image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/b7f66634-942b-4f5c-b01d-777ba5d78d62.png" width = "400">
+<image src = "https://github.com/Snackels/WRO_Future-Engineer_Sunflower/assets/92850241/c5e46679-3c1e-49af-be01-14741f34a90c.png" width = "400">
 
 Light sensors are crucial for robots to navigate and give orders to other components. To make this process more efficient, two different colors, red and blue, are used for these lines. This color choice enables the robot to not just detect the lines but also distinguish between red and blue lines. This additional information helps the robot determine the number of laps it has completed around the race field, making it smarter and better equipped to compete in the race.
 <br><br>
