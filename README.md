@@ -109,7 +109,8 @@ This Lithium Polymer battery is the power source for our robot. We typically use
 
 (blue sensor)
 
-<image src = "" width = "400">
+<image src = "https://github.com/Snackels/WRO_Future-Engineer_Sunflower/assets/92850241/8694c60f-f4d4-4856-9a16-9c467e8f3677.png
+" width = "400">
 
  (red sensor)
  
