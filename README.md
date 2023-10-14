@@ -22,14 +22,14 @@ by Team *Sunflower*
 
 ### This Github repository contains:
 - Team information
-- Design process
-- Program explaination
+- Design Process
+- Program Explanation
 
 <br><br><br><br>
 
 # **Part 1: About our team.**
 *YBR-Sunflower* is a team of three. All the team members are students at Yothinburana School. 
-Here are team members.
+Here are the team members.
 1. Vorawet Narkglom, 15 years old, programmer.
 
 2. Sakolnat Raktaengan, 15 years old, robot designer.
@@ -38,9 +38,9 @@ Here are team members.
 # **Part 2: Robot design.**
 ### The Robot
 
-Designing a robot is sometimes difficult. We need to design every part we intend to use, making it small, lightweight, fast, and effective. If it's too heavy, the robot will be slower. If it's too big, evading obstacles will take a lot of space. If it's ineffective, it won't be able to detect walls, obstacles, or walk properly. That's why we need to balance the robot, keeping it not too heavy, small, and fast to accomplish its mission.
+Designing a robot is a challenging task that requires a meticulous approach. We must design every component with precision to achieve small, lightweight, fast, and effective results. Heavy robots are slow, and large robots face difficulties evading obstacles. Ineffective design can lead to problems detecting walls, obstacles, or even difficulty walking. Therefore, it's crucial to balance the robot's design, ensuring that it's neither too heavy nor too large. In other words, our robots must be small, fast, and effective enough to accomplish their mission.
 
-For this competition, there are rules regarding robot design, which include a requirement that the vehicle must be a four-wheeled vehicle with one driving axle and one steering actuator of any type. The use of a camera is highly recommended due to the mission's nature.
+To participate in this competition, the robot design must follow specific rules. The vehicle must be a four-wheeled vehicle with one driving axle and one steering actuator, which can be of any type. It is highly recommended to use a camera due to the mission's nature.
 
 Additionally, the rules also said that:
 
@@ -54,19 +54,19 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 - ## **Driving motor** : Power functions Large-motor made by LEGO™.
 <image src="https://ae01.alicdn.com/kf/Sc4433b091f32440e8094b8ab8c003eacI/2pcs-Enhanced-Red-L-Servo-Motor-Compatible-With-Legoeds-Power-Functions-MOC-Parts-Building-Blocks.jpg" width = "400">
 
-A fast and incredibly user-friendly motor. Just a few minutes of soldering the wires, and we are ready to use it. Among all the motors, we chose this one because it is neither too fast nor too slow, and it is quite easy to attach to the robot frame. It can be adjusted for Lego and Arduino by soldering.
+We have chosen a fast and incredibly user-friendly motor for our robot. With just a few minutes of soldering the wires, we are ready to use it. This motor is perfect for our robot as it's neither too fast nor too slow, and it's quite easy to attach to the robot frame. Additionally, it can be adjusted for Lego and Arduino by soldering.
 
 ### Specification
-- Speed : 380 rpm
+- Speed: 380 rpm
 - Maximum torque : 40 Ncm
-- Voltage : 9 v
+- Voltage: 9 v
 
 <br><br>
 
 - ## **Servo** : GEEKSERVO-270  a 180 degree servo.
 <image src="https://thepihut.com/cdn/shop/products/geekservo-building-brick-180-rotation-block-servo-geekservo-104134-28717056917699_1000x.jpg?v=1646869335" width = "400">
 
-We chose this servo because it is pretty easy to attach to our robot frame and got the right degree we needed to use for steering and ultrasonic which is 180 degree.
+We selected this servo for our robot as it was easy to attach to the robot frame and had the required degree (180) for steering and ultrasonic.
 
 ### Specification
 - Working voltage: 3.3V~6V
@@ -81,7 +81,7 @@ We chose this servo because it is pretty easy to attach to our robot frame and g
 - ## **Ultra sonic sensor** : Gravity URM 09 ultrasonic distance sensor.
 <image src="https://robotools.in/wp-content/uploads/2022/10/DFRobot-Gravity-URM09-Analog-Ultrasonic-Sensor-5-1-1200x900.jpg" width = "400">
 
-The ultrasonic sensor plays a crucial role in guiding the robot's navigation by detecting distances between the robot and obstacles. This enables the robot to skillfully avoid walls in its path. But to use the sensor we need to attach at the right position not too high and make it right turning degree
+The ultrasonic sensor is a crucial component in guiding our robot's navigation by detecting distances between the robot and obstacles. This enables the robot to skillfully avoid walls in its path. However, for the sensor to function correctly, it needs to be attached at the right position, not too high, and with the correct turning degree.
 
 ### Specification
 - Supply Voltage: 3.3~5.5V DC
@@ -96,10 +96,10 @@ The ultrasonic sensor plays a crucial role in guiding the robot's navigation by 
 - ## **7.4 voltage Lipo-Battery** : 7.4 voltage 2 cell Lipo-Battery.
 <image src="https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/4b0e6cb0-ba45-4377-bb51-b34038d68638.png" width = "400">
 
-The power source for our robot. This battery is the Lithium Polymer type, normally we use at 8.3 and recharge at 7.2 to save the battery life and for safety
+This Lithium Polymer battery is the power source for our robot. We typically use it at 8.3 and aim to keep it at 7.9 to extend the battery life and ensure safety. We recharge it at 7.4 for the same reasons.
 
 ### Specification
-- 2 cells voltage: 7.4V
+- 2 cells Voltage: 7.4V
 - Capacity: 1100mAh 30C
 - Can be charged at a current of up to 5 times the capacity (5C)
 - Connectors are in a JST type that can be easily disconnected.
@@ -115,7 +115,7 @@ The power source for our robot. This battery is the Lithium Polymer type, normal
  
 <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/b7f66634-942b-4f5c-b01d-777ba5d78d62.png" width = "400">
 
-Light sensors play a crucial role in helping robots know where to stop and give order to other component. But what's interesting is that we use two different colors for these lines: red and blue. This choice lets the robot not only see the lines but also figure out whether they are red or blue. This extra bit of information helps the robot know how many times it have orbit around the race field, making it smarter and better equipped for the race.
+Light sensors are crucial for robots to navigate and give orders to other components. To make this process more efficient, two different colors, red and blue, are used for these lines. This color choice enables the robot to not just detect the lines but also distinguish between red and blue lines. This additional information helps the robot determine the number of laps it has completed around the race field, making it smarter and better equipped to compete in the race.
 <br><br>
 
 - ## **GyroCompass** :GY-25
@@ -135,22 +135,22 @@ This component equips the robot with the ability to discern its current orientat
 
   <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/bf7a29f9-a2cf-4b85-a056-3f12b4e75966.png" width = "400">
 
-The camera serves the purpose of identifying color blocks (obstacles) and transmitting corresponding signals to the robot. For instance, upon detecting a red block, it instructs the robot to veer to the right. Conversely, when a green block is detected, it signals the robot to navigate towards the left, but if it doesn't detect any color it will go forward. 
+The camera serves the purpose of identifying color blocks (obstacles) and transmitting corresponding signals to the robot. For instance, upon detecting a red block, it instructs the robot to veer to the right. Conversely, when a green block is detected, it signals the robot to navigate toward the left, but if it doesn't detect any color it will go forward. 
 
 ### Specification
-- Resolution : 1296 x 976
+- Resolution: 1296 x 976
 - Processor: NXP LPC4330
-- Cloak speed : 204 MHz
-- Ram : 264KB
-- Flash : 2 MB
-- Framerate : 60 fps
-- Connection : USB, UART, SPI, I²C
+- Cloak speed: 204 MHz
+- Ram: 264KB
+- Flash: 2 MB
+- Framerate: 60 fps
+- Connection: USB, UART, SPI, I²C
 <br><br>
 
 - ## **Controller** :POP-32 , a 32bit controller
 <image src = "https://github.com/LEST0808/POP32ph/blob/main/POP32%20(1).png?raw=true" width = "400">
 
-This controller is 32bit which make the reaction time faster, more accurate, better multitasking, and etc.
+This controller is 32bit which makes the reaction time faster, more accurate, better multitasking, etc.
 
 ### Specification
 - Microcontroller: Uses a 32-bit STM32F103CBT6 microcontroller with 128KB of flash memory for new programs, which can be programmed up to 10,000 times. It has 20KB of RAM.
@@ -167,7 +167,7 @@ This controller is 32bit which make the reaction time faster, more accurate, bet
 
 - Power Input: Has a power input port via a screw terminal block that accepts power from 6V to 9V with an on/off switch for power control.
 
-- Battery Compatibility: Designed for use with maximum 2-cell lithium polymer batteries (7.4V to a maximum of 8.4V).
+- Battery Compatibility: Designed for use with a maximum of 2-cell lithium polymer batteries (7.4V to a maximum of 8.4V).
 
 - Voltage Regulation: Includes a voltage regulation circuit to supply 3.3V to the microcontroller, OLED display, and main input/output ports.
 
@@ -191,5 +191,5 @@ This controller is 32bit which make the reaction time faster, more accurate, bet
 ### Our robot wiring diagram 
 
 
-# **Part 3: Program explaination**
+# **Part 3: Program explanation**
 
