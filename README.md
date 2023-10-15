@@ -188,7 +188,7 @@ This controller is 32bit which makes the reaction time faster, more accurate, be
 
 # **Part 3: Program explanation**
 
-We have two program for two for two round qualification round and final round the first program contain two subprogram same as the program for final round the subprogram contain main and function I will explain the main program for qualification round first so 
+We have developed two programs for our upcoming competition. Each program is designed for a different round - the qualification round and the final round. The first program includes two subprograms that are also included in the program for the final round. Each subprogram is made up of a main program and a function. 
 
 ### First Section [qualification round]
 In the first section or before void setup in our program, we declare all the libraries and variables that we will be using in the program. The libraries that we use include POP32.h, which is the library for our controller, PID_V2.h, which is for PID (Proportional-Integral-Derivative controller), and Mapf.h, which provides floating-point reading from function mapf() and changes any ADC resolution input reading to any voltage output with mapf_ADC(). The variables declared include Gyro variable, Ultrasonic pin, Light sensor pin, Button pin, and field config that does not represent any pin. These variables will be used in the program later.
