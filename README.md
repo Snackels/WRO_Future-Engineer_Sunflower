@@ -38,9 +38,11 @@ Here are the team members.
 # **Part 2: Robot design.**
 ### The Robot
 
-Designing a robot is a challenging task that requires a meticulous approach. We must design every component with precision to achieve small, lightweight, fast, and effective results. Heavy robots are slow, and large robots face difficulties evading obstacles. Ineffective design can lead to problems detecting walls, obstacles, or even difficulty walking. Therefore, it's crucial to balance the robot's design, ensuring that it's neither too heavy nor too large. In other words, our robots must be small, fast, and effective enough to accomplish their mission.
+Designing a good robot is indeed a challenging task as it requires a lot of consideration and planning to ensure it can move swiftly and follow specific rules. One of the primary requirements is that the robot must be a four-wheeled vehicle with one driving axle and one steering actuator, which is why we carefully chose these components. After selecting all the necessary components, we had to figure out how to make them all fit together. For instance, we placed the compass around the middle-top of the robot to get the most accurate output, while the camera was positioned at the back-top to detect objects quickly.
 
-To participate in this competition, the robot design must follow specific rules. The vehicle must be a four-wheeled vehicle with one driving axle and one steering actuator, which can be of any type. It is highly recommended to use a camera due to the mission's nature.
+We also included a separate button to start the program quickly and avoid accidentally moving the robot while trying to push the start button. Our robot has two servos, one on the bottom front and one on the top front. The bottom front servo is used to steer the wheel, and we had to remake the front part of the robot because we faced a problem during the national round. The robot was too slim, and when we steered too much, it acted like a brake, making it difficult to maneuver. So, we made the robot slightly larger to prevent this issue.
+
+Finally, we added a top servo that rotates our ultrasonic. Initially, we thought of using two ultrasonics, but we realized that the waves could hit each other, making the received data inaccurate. Therefore, we designed our robot to have a single ultrasonic, which ensured that the data we received was precise. 
 
 Additionally, the rules also said that:
 
