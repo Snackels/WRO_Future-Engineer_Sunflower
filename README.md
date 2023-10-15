@@ -183,10 +183,12 @@ In the second section, which is void setup, we put the program to 0 or reset the
  ### Third Section [qualification round]
 In the third section(void loop), we begin with using some emojis and emoticons. This is an essential part of the program as it can help boost the programmer's brainpower. If you don't believe me, you can take a look at the program. It can be found on line 48 of the code, Link to the program --> "https://github.com/Snackels/WRO_Future-Engineer_Sunflower/blob/main/Robot/Code/no%20obstacle/No-object.ino.".The next part involves obtaining data from the IMU, which is similar to fetching data from a compass. However, if you can't locate the 'get_IMU' function in our program, don't be surprised. The coder might have changed its name to 'get_BURRITO' for some inexplicable reason, possibly due to hunger. Now, joking aside, we have the 'motor_and_steer' function in the formula, which looks like this:
 
-### ((1 * s) * compassPID.Run((pvYaw * s) + ((wall_distance - 25) * 2) * ((float(TURN == 'TURN') - 0.2) * 2)));
+#### ((1 * s) * compassPID.Run((pvYaw * s) + ((wall_distance - 25) * 2) * ((float(TURN == 'TURN') - 0.2) * 2)));
 
 In this formula, 's' is actually a variable that multiplies with '1.' What is 's'? It's essentially a numerical value that changes depending on the color of the line the robot detects first. For instance, if it sees a blue line first, the 's' variable becomes -1, making the entire formula negative. You might be wondering why we need this - it's to ensure that the robot faces the same way on both sides.
 
 Now, about 'compassPID,' 'wall_distance,' and 'pvYaw' - they are all components that help the robot stay in the middle of the race field. We multiply 'pvYaw' and 's' together to calculate the precise center of the field. 'pvYaw' represents the robot's position along the x-axis. The compass provides three variables - Yaw, Roll, and Pitch, each representing a different axis. In our case, we're interested in the x-axis, which is why we use 'Yaw.'
 
-Lastly, let's talk about the 'line count' program. This program counts 12 lines and predicts when the robot needs to stop based on a timer. The timer starts counting when the robot crosses the 12th line. And that's it for the 'void loop' function!"
+Lastly, let's talk about the 'line count' program. This program counts 12 lines and predicts when the robot needs to stop based on a timer. The timer starts counting when the robot crosses the 12th line. And that's it for the 'void loop' function!
+
+### Function [qualification round]
