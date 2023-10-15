@@ -56,8 +56,6 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 - ## **Driving motor** : Power functions Large-motor made by LEGO™.
 <image src="https://ae01.alicdn.com/kf/Sc4433b091f32440e8094b8ab8c003eacI/2pcs-Enhanced-Red-L-Servo-Motor-Compatible-With-Legoeds-Power-Functions-MOC-Parts-Building-Blocks.jpg" width = "400">
 
-We have chosen a fast and incredibly user-friendly motor for our robot. With just a few minutes of soldering the wires, we are ready to use it. This motor is perfect for our robot as it's neither too fast nor too slow, and it's quite easy to attach to the robot frame. Additionally, it can be adjusted for Lego and Arduino by soldering.
-
 ### Specification
 - Speed: 380 rpm
 - Maximum torque : 40 Ncm
@@ -67,8 +65,6 @@ We have chosen a fast and incredibly user-friendly motor for our robot. With jus
 
 - ## **Servo** : GEEKSERVO-270  a 180 degree servo.
 <image src="https://thepihut.com/cdn/shop/products/geekservo-building-brick-180-rotation-block-servo-geekservo-104134-28717056917699_1000x.jpg?v=1646869335" width = "400">
-
-We selected this servo for our robot as it was easy to attach to the robot frame and had the required degree (180) for steering and ultrasonic.
 
 ### Specification
 - Working voltage: 3.3V~6V
@@ -83,8 +79,6 @@ We selected this servo for our robot as it was easy to attach to the robot frame
 - ## **Ultra sonic sensor** : Gravity URM 09 ultrasonic distance sensor.
 <image src="https://robotools.in/wp-content/uploads/2022/10/DFRobot-Gravity-URM09-Analog-Ultrasonic-Sensor-5-1-1200x900.jpg" width = "400">
 
-The ultrasonic sensor is a crucial component in guiding our robot's navigation by detecting distances between the robot and obstacles. This enables the robot to skillfully avoid walls in its path. However, for the sensor to function correctly, it needs to be attached at the right position, not too high, and with the correct turning degree.
-
 ### Specification
 - Supply Voltage: 3.3~5.5V DC
 - Operating Current: 20mA
@@ -98,8 +92,6 @@ The ultrasonic sensor is a crucial component in guiding our robot's navigation b
 - ## **7.4 voltage Lipo-Battery** : 7.4 voltage 2 cell Lipo-Battery.
 <image src="https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/4b0e6cb0-ba45-4377-bb51-b34038d68638.png" width = "400">
 
-This Lithium Polymer battery is the power source for our robot. We typically use it at 8.3 and aim to keep it at 7.9 to extend the battery life and ensure safety. We recharge it at 7.4 for the same reasons.
-
 ### Specification
 - 2 cells Voltage: 7.4V
 - Capacity: 1100mAh 30C
@@ -109,15 +101,11 @@ This Lithium Polymer battery is the power source for our robot. We typically use
 
 - ## **Light Sensor** : Virus III by Design By Sopon
 <image src = "https://github.com/Snackels/WRO_Future-Engineer_Sunflower/assets/92850241/c5e46679-3c1e-49af-be01-14741f34a90c.png" width = "400">
-
-Light sensors are crucial for robots to navigate and give orders to other components. To make this process more efficient, two different colors, red and blue, are used for these lines. This color choice enables the robot to not just detect the lines but also distinguish between red and blue lines. This additional information helps the robot determine the number of laps it has completed around the race field, making it smarter and better equipped to compete in the race.
 <br><br>
 
 - ## **GyroCompass** :GY-25
 
   <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/ed4a0af9-6420-498d-9d8f-a17c8bb455b0.png" width = "400">
-
-This component equips the robot with the ability to discern its current orientation, thereby enabling it to determine the appropriate direction for turning.
 
 ### Specification
 - Measuring range of axes: -180 to +180 degrees
@@ -129,8 +117,6 @@ This component equips the robot with the ability to discern its current orientat
 - ## **Camera** :Pixy2.0
 
   <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/bf7a29f9-a2cf-4b85-a056-3f12b4e75966.png" width = "400">
-
-The camera serves the purpose of identifying color blocks (obstacles) and transmitting corresponding signals to the robot. For instance, upon detecting a red block, it instructs the robot to veer to the right. Conversely, when a green block is detected, it signals the robot to navigate toward the left, but if it doesn't detect any color it will go forward. 
 
 ### Specification
 - Resolution: 1296 x 976
@@ -144,8 +130,6 @@ The camera serves the purpose of identifying color blocks (obstacles) and transm
 
 - ## **Controller** :POP-32 , a 32bit controller
 <image src = "https://github.com/LEST0808/POP32ph/blob/main/POP32%20(1).png?raw=true" width = "400">
-
-This controller is 32bit which makes the reaction time faster, more accurate, better multitasking, etc.
 
 ### Specification
 - Microcontroller: Uses a 32-bit STM32F103CBT6 microcontroller with 128KB of flash memory for new programs, which can be programmed up to 10,000 times. It has 20KB of RAM.
