@@ -192,3 +192,5 @@ Now, about 'compassPID,' 'wall_distance,' and 'pvYaw' - they are all components 
 Lastly, let's talk about the 'line count' program. This program counts 12 lines and predicts when the robot needs to stop based on a timer. The timer starts counting when the robot crosses the 12th line. And that's it for the 'void loop' function!
 
 ### Function [qualification round]
+
+1
