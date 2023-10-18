@@ -100,8 +100,11 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 <br><br>
 
 - ## **Light Sensor** : Virus III by Design By Sopon
-<image src = "https://github.com/Snackels/WRO_Future-Engineer_Sunflower/assets/92850241/c5e46679-3c1e-49af-be01-14741f34a90c.png" width = "400">
+<image src = "https://github.com/LEST0808/POP32ph/blob/main/S__10362883.jpg" width = "400">
 <br><br>
+
+- ## **Touch Sensor** : ZX-Switch 01 by INEX
+- <image src = "https://inex.co.th/home/wp-content/uploads/2020/07/zx-switch01.jpg" width = "400">
 
 - ## **GyroCompass** :GY-25
 
