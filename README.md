@@ -169,6 +169,8 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 
 - Push Buttons and Knob: Includes push buttons (OK, SW-A, SW-B) and an adjustable knob (KNOB) for input and testing.
 
+- ## **Step down** : HW-360 V6.0
+
 <br><br>
 ### Our robot wiring diagram 
 
