@@ -136,40 +136,36 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 
 ### Specification
 - Microcontroller: Uses a 32-bit STM32F103CBT6 microcontroller with 128KB of flash memory for new programs, which can be programmed up to 10,000 times. It has 20KB of RAM.
-
 - Clock Signal: The clock signal is 20MHz from a ceramic resonator.
-
 - JST 3-Pin Ports: It has JST 3-pin connectors with 11 points for connecting sensors and peripheral devices.
-
 - LED Indicators: Includes LED indicators for power status, low battery alert, and USB port connection status.
-
 - RESET Switch: Features a RESET switch.
-
 - USB Port: Provides a USB port for program downloading and data communication with a computer.
-
 - Power Input: Has a power input port via a screw terminal block that accepts power from 6V to 9V with an on/off switch for power control.
-
 - Battery Compatibility: Designed for use with a maximum of 2-cell lithium polymer batteries (7.4V to a maximum of 8.4V).
-
 - Voltage Regulation: Includes a voltage regulation circuit to supply 3.3V to the microcontroller, OLED display, and main input/output ports.
-
 - Digital and Analog Ports: Offers 9 digital or analog input/output ports, including A0 to A8 (corresponding to PA0 to PA7 and PB0), for receiving external signals.
-
 - I2C Ports: Provides 2 sets of digital ports supporting I2C bus (SDA and SCL) using PH4 connectors arranged in GROVE format.
-
 - UART Port: Includes a UART port for sequential data communication, with one set of ports on PB7 (RxD) and PB6 (TxD).
-
 - Motor Driver Circuit: Features a motor driver circuit with 4 channels and LED status indicators, supporting motors from 3V to 12V. It can continuously drive a current of 1.5A per channel, with a maximum of 2A per channel, and includes overcurrent protection.
-
 - Servo Motor Ports: Offers 6 servo motor ports for driving servo motors.
-
 - Speaker: Includes a piezo speaker for generating sound, connected to PB5.
-
 - OLED Display: Features a 1.5-inch OLED display with a resolution of 128 x 64 pixels, capable of displaying graphics and text. It communicates via I2C.
-
 - Push Buttons and Knob: Includes push buttons (OK, SW-A, SW-B) and an adjustable knob (KNOB) for input and testing.
 
 - ## **Step down** : HW-360 V6.0
+<img src = "https://github.com/LEST0808/POP32ph/blob/main/HW316.png" width = "400">
+
+### Specification
+- Input voltage: DC 4.0 ~ 38V                                                             
+- Output voltage: DC 1.25V ~ 36V continuously adjustable 
+- Output current: max 5A, 
+- Output power: up to 75W
+- Voltmeter error: ± 0.05V
+- Measure range: 0 ~ 40V 
+- Conversion efficiency: up to 96%
+- Load regulation: S (I) ≤ 0.8%
+- Voltage Regulation: S (u) ≤ 0.8%
 
 <br><br>
 ### Our robot wiring diagram 
