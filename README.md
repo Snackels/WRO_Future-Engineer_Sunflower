@@ -63,7 +63,7 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 
 <br><br>
 
-- ## **Servo** : GEEKSERVO-270  a 180 degree servo.
+- ## **Servo** : GEEKSERVO 2kg 360 Degrees servo.
 <image src="https://github.com/LEST0808/POP32ph/blob/main/Servo.png" width = "400">
 
 ### Specification
@@ -77,7 +77,7 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 <br><br>
 
 - ## **Ultra sonic sensor** : Gravity URM 09 ultrasonic distance sensor.
-<image src="" width = "400">
+<image src="https://th.mouser.com/images/marketingid/2021/img/117270007.png?v=070223.0307" width = "400">
 
 ### Specification
 - Supply Voltage: 3.3~5.5V DC
