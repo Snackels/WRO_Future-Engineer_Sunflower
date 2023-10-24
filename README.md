@@ -54,7 +54,7 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 ### Our robot components
 
 - ## **Driving motor** : Power functions Large-motor made by LEGO™.
-<image src="https://ae01.alicdn.com/kf/Sc4433b091f32440e8094b8ab8c003eacI/2pcs-Enhanced-Red-L-Servo-Motor-Compatible-With-Legoeds-Power-Functions-MOC-Parts-Building-Blocks.jpg" width = "400">
+<image src="https://github.com/LEST0808/POP32ph/blob/main/Motor.png" width = "400">
 
 ### Specification
 - Speed: 380 rpm
@@ -64,7 +64,7 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 <br><br>
 
 - ## **Servo** : GEEKSERVO-270  a 180 degree servo.
-<image src="https://thepihut.com/cdn/shop/products/geekservo-building-brick-180-rotation-block-servo-geekservo-104134-28717056917699_1000x.jpg?v=1646869335" width = "400">
+<image src="https://github.com/LEST0808/POP32ph/blob/main/Servo.png" width = "400">
 
 ### Specification
 - Working voltage: 3.3V~6V
@@ -77,7 +77,7 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 <br><br>
 
 - ## **Ultra sonic sensor** : Gravity URM 09 ultrasonic distance sensor.
-<image src="https://robotools.in/wp-content/uploads/2022/10/DFRobot-Gravity-URM09-Analog-Ultrasonic-Sensor-5-1-1200x900.jpg" width = "400">
+<image src="" width = "400">
 
 ### Specification
 - Supply Voltage: 3.3~5.5V DC
@@ -90,7 +90,7 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 <br><br>
 
 - ## **7.4 voltage Lipo-Battery** : 7.4 voltage 2 cell Lipo-Battery.
-<image src="https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/4b0e6cb0-ba45-4377-bb51-b34038d68638.png" width = "400">
+<image src="https://github.com/LEST0808/POP32ph/blob/main/Bat.png" width = "400">
 
 ### Specification
 - 2 cells Voltage: 7.4V
@@ -100,15 +100,15 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 <br><br>
 
 - ## **Light Sensor** : Virus III by Design By Sopon
-<image src = "https://github.com/LEST0808/POP32ph/blob/main/S__10362883.jpg" width = "400">
+<image src = "https://github.com/LEST0808/POP32ph/blob/main/Virus.png" width = "400">
 <br><br>
 
 - ## **Touch Sensor** : ZX-Switch 01 by INEX
-- <image src = "https://inex.co.th/home/wp-content/uploads/2020/07/zx-switch01.jpg" width = "400">
+<image src = "https://github.com/LEST0808/POP32ph/blob/main/ZX%20switch.png" width = "400">
 
 - ## **GyroCompass** :GY-25
 
-  <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/ed4a0af9-6420-498d-9d8f-a17c8bb455b0.png" width = "400">
+<image src = "https://github.com/LEST0808/POP32ph/blob/main/Gy25%201.png" width = "400">
 
 ### Specification
 - Measuring range of axes: -180 to +180 degrees
@@ -119,7 +119,7 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 
 - ## **Camera** :Pixy2.0
 
-  <image src = "https://github.com/Snackels/WRO_Future-Engineer/assets/92850241/bf7a29f9-a2cf-4b85-a056-3f12b4e75966.png" width = "400">
+<image src = "https://github.com/LEST0808/POP32ph/blob/main/Pixy.png" width = "400">
 
 ### Specification
 - Resolution: 1296 x 976
@@ -132,7 +132,7 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 <br><br>
 
 - ## **Controller** :POP-32 , a 32bit controller
-<image src = "https://github.com/LEST0808/POP32ph/blob/main/POP32%20(1).png?raw=true" width = "400">
+<image src = "https://github.com/LEST0808/POP32ph/blob/main/PoP.png" width = "400">
 
 ### Specification
 - Microcontroller: Uses a 32-bit STM32F103CBT6 microcontroller with 128KB of flash memory for new programs, which can be programmed up to 10,000 times. It has 20KB of RAM.
