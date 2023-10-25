@@ -56,47 +56,76 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 - ## **Driving motor** : Power functions Large-motor made by LEGO™.
 <image src="https://github.com/LEST0808/POP32ph/blob/main/Motor.png" width = "400">
 
-### Specification
-- Speed: 380 rpm
-- Maximum torque : 40 Ncm
-- Voltage: 9 v
+### Electrical Specifications
+
+| Specification     | Value    |
+|-------------------|----------|
+| Voltage           | 9 V      |
+
+### Mechanical Specifications
+
+| Specification     | Value    |
+|-------------------|----------|
+| Speed             | 380 rpm  |
+| Maximum torque    | 40 Ncm   |
 
 <br><br>
 
 - ## **Servo** : GEEKSERVO 2kg 360 Degrees servo.
-<image src="https://github.com/LEST0808/POP32ph/blob/main/Servo.png" width = "400">
+<image src="https://github.com/LEST0808/POP32ph/blob/main/Servo%201.png" width = "400">
 
-### Specification
-- Working voltage: 3.3V~6V
-- Rated voltage: 4.8V
-- Rated current: 200ma
-- Stall current: 700ma
-- Sliding current: 450ma
-- Maximum torque: 500g.cm
-- Angle speed: 60°/0.12s
-<br><br>
+### Electrical Specifications
+
+| Specification     | Value    |
+|-------------------|----------|
+| Working voltage   | 3.3V~6V  |
+| Rated voltage     | 4.8V     |
+| Rated current     | 200mA    |
+| Stall current     | 700mA    |
+| Sliding current   | 450mA    |
+
+### Mechanical Specifications
+
+| Specification     | Value     |
+|-------------------|-----------|
+| Maximum torque    | 500g.cm   |
+| Angle speed       | 60°/0.12s |
+
 
 - ## **Ultra sonic sensor** : Gravity URM 09 ultrasonic distance sensor.
-<image src="https://th.mouser.com/images/marketingid/2021/img/117270007.png?v=070223.0307" width = "400">
+<image src="https://github.com/LEST0808/POP32ph/blob/main/117270007.png" width = "400">
 
-### Specification
-- Supply Voltage: 3.3~5.5V DC
-- Operating Current: 20mA
-- Operating Temperature Range:  -10℃～＋70℃
-- Measurement Range: 2cm～500cm (can be set)
-- Resolution: 1cm
-- Accuracy: 1%
-- Frequency: 50Hz Max
+### Electrical Specifications
+
+| Specification                   | Value                  |
+|---------------------------------|------------------------|
+| Supply Voltage                  | 3.3~5.5V DC            |
+| Operating Current               | 20mA                   |
+
+### Performance Specifications
+
+| Specification                   | Value                  |
+|---------------------------------|------------------------|
+| Operating Temperature Range      | -10°C to +70°C          |
+| Measurement Range                | 2cm to 500cm (can be set) |
+| Resolution                       | 1cm                    |
+| Accuracy                         | 1%                     |
+| Frequency                        | 50Hz Max               |
+
 <br><br>
 
 - ## **7.4 voltage Lipo-Battery** : 7.4 voltage 2 cell Lipo-Battery.
 <image src="https://github.com/LEST0808/POP32ph/blob/main/Bat.png" width = "400">
 
 ### Specification
-- 2 cells Voltage: 7.4V
-- Capacity: 1100mAh 30C
-- Can be charged at a current of up to 5 times the capacity (5C)
-- Connectors are in a JST type that can be easily disconnected.
+
+| Specification                   | Value                                        |
+|---------------------------------|----------------------------------------------|
+| 2 cells Voltage                  | 7.4V                                         |
+| Capacity                         | 1100mAh 30C                                  |
+| Charging Current                 | Up to 5 times the capacity (5C)             |
+| Connectors                       | JST type, easily disconnectable              |
+
 <br><br>
 
 - ## **Light Sensor** : Virus III by Design By Sopon
@@ -108,64 +137,147 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 
 - ## **GyroCompass** :GY-25
 
-<image src = "https://github.com/LEST0808/POP32ph/blob/main/Gy25%201.png" width = "400">
+<image src = "https://github.com/LEST0808/POP32ph/blob/main/gy25-tilt-sngle-sensor-oky3254.png" width = "400">
 
 ### Specification
-- Measuring range of axes: -180 to +180 degrees
-- Resolution: 0.01 degrees Frequency Response: 100HZ (115200bps)
-- Operating Current: 15 mA
-- Operating Temperature: -20 to 85 °C
+
+#### Power and Communication
+
+| Specification             | Value                                           |
+|---------------------------|-------------------------------------------------|
+| Power supply              | 3-5V (internal low dropout regulator)          |
+| Used Chip                 | MCU+MPU6050                                     |
+| Communication mode        | Serial communication (baud 9600, 115200), IIC communication |
+| Operating Current         | 15 mA                                          |
+
+#### Angular Measurement
+
+| Specification             | Value                                           |
+|---------------------------|-------------------------------------------------|
+| Angular Resolution        | 0.01°                                           |
+| Direct Data               | YAW ROLL PITCH                                 |
+| Measuring range of axes   | -180 to +180 degrees                           |
+| Resolution                | 0.01 degrees                                  |
+| Frequency Response        | 100Hz (115200bps)                              |
+| Operating Temperature     | -20 to 85°C                                    |
+
 <br><br>
 
 - ## **Camera** :Pixy2.0
 
-<image src = "https://github.com/LEST0808/POP32ph/blob/main/Pixy.png" width = "400">
+<image src = "https://github.com/LEST0808/POP32ph/blob/main/Pixy-2.png" width = "400">
 
 ### Specification
-- Resolution: 1296 x 976
-- Processor: NXP LPC4330
-- Cloak speed: 204 MHz
-- Ram: 264KB
-- Flash: 2 MB
-- Framerate: 60 fps
-- Connection: USB, UART, SPI, I²C
+
+#### Display
+
+| Specification     | Value       |
+|-------------------|-------------|
+| Resolution        | 1296 x 976   |
+
+#### Processor and Memory
+
+| Specification     | Value       |
+|-------------------|-------------|
+| Processor         | NXP LPC4330 |
+| Clock Speed       | 204 MHz     |
+| RAM               | 264KB       |
+| Flash             | 2 MB        |
+
+#### Performance
+
+| Specification     | Value       |
+|-------------------|-------------|
+| Framerate         | 60 fps      |
+
+#### Connectivity
+
+| Specification     | Value       |
+|-------------------|-------------|
+| Connection        | USB, UART, SPI, I²C |
+
 <br><br>
 
-- ## **Controller** :POP-32 , a 32bit controller
-<image src = "https://github.com/LEST0808/POP32ph/blob/main/PoP.png" width = "400">
+- ## **Controller** :POP-32i , a 32bit controller
+<image src = "https://github.com/LEST0808/POP32ph/blob/main/POP-32i-001.png" width = "400">
 
 ### Specification
-- Microcontroller: Uses a 32-bit STM32F103CBT6 microcontroller with 128KB of flash memory for new programs, which can be programmed up to 10,000 times. It has 20KB of RAM.
-- Clock Signal: The clock signal is 20MHz from a ceramic resonator.
-- JST 3-Pin Ports: It has JST 3-pin connectors with 11 points for connecting sensors and peripheral devices.
-- LED Indicators: Includes LED indicators for power status, low battery alert, and USB port connection status.
-- RESET Switch: Features a RESET switch.
-- USB Port: Provides a USB port for program downloading and data communication with a computer.
-- Power Input: Has a power input port via a screw terminal block that accepts power from 6V to 9V with an on/off switch for power control.
-- Battery Compatibility: Designed for use with a maximum of 2-cell lithium polymer batteries (7.4V to a maximum of 8.4V).
-- Voltage Regulation: Includes a voltage regulation circuit to supply 3.3V to the microcontroller, OLED display, and main input/output ports.
-- Digital and Analog Ports: Offers 9 digital or analog input/output ports, including A0 to A8 (corresponding to PA0 to PA7 and PB0), for receiving external signals.
-- I2C Ports: Provides 2 sets of digital ports supporting I2C bus (SDA and SCL) using PH4 connectors arranged in GROVE format.
-- UART Port: Includes a UART port for sequential data communication, with one set of ports on PB7 (RxD) and PB6 (TxD).
-- Motor Driver Circuit: Features a motor driver circuit with 4 channels and LED status indicators, supporting motors from 3V to 12V. It can continuously drive a current of 1.5A per channel, with a maximum of 2A per channel, and includes overcurrent protection.
-- Servo Motor Ports: Offers 6 servo motor ports for driving servo motors.
-- Speaker: Includes a piezo speaker for generating sound, connected to PB5.
-- OLED Display: Features a 1.5-inch OLED display with a resolution of 128 x 64 pixels, capable of displaying graphics and text. It communicates via I2C.
-- Push Buttons and Knob: Includes push buttons (OK, SW-A, SW-B) and an adjustable knob (KNOB) for input and testing.
+### Main Specification
 
-- ## **Step down** : HW-360 V6.0
-<img src = "https://github.com/LEST0808/POP32ph/blob/main/HW316.png" width = "400">
+#### Microcontroller
+
+| Specification           | Value                                           |
+|-------------------------|-------------------------------------------------|
+| Microcontroller         | 32-bit STM32F103CBT6                            |
+| Flash Memory            | 128KB (reprogrammable up to 10,000 times)       |
+| RAM                     | 20KB                                            |
+
+#### Clock and Ports
+
+| Specification           | Value                                           |
+|-------------------------|-------------------------------------------------|
+| Clock Signal            | 20MHz (ceramic resonator)                       |
+| JST 3-Pin Ports         | 11 points for sensors and peripherals          |
+| LED Indicators          | Power, low battery alert, USB connection status |
+| RESET Switch            | RESET Switch Included                                        |
+| USB Port                | For program downloading and data communication  |
+| Power Input             | 6V to 9V, with on/off switch                    |
+| Battery Compatibility   | Up to 2-cell lithium polymer batteries (7.4V to 8.4V) |
+| Voltage Regulation      | Supplies 3.3V to microcontroller, OLED display, and I/O ports |
+| Digital/Analog Ports    | 9 digital/analog I/O ports (A0 to A8)          |
+| I2C Ports               | 2 sets supporting I2C bus (SDA and SCL)        |
+| UART Port               | Sequential data communication (RxD, TxD)       |
+
+#### Motor Control
+
+| Specification           | Value                                           |
+|-------------------------|-------------------------------------------------|
+| Motor Driver Circuit    | 4 channels, supports 3V to 12V motors          |
+| Current Handling        | 1.5A continuous, 2A max per channel             |
+| Overcurrent Protection  | Included                                        |
+
+#### Servo Motors, Sound, Display, Input
+
+| Specification           | Value                                           |
+|-------------------------|-------------------------------------------------|
+| Servo Motor Ports       | 6 ports for driving servo motors                |
+| Speaker                 | Piezo speaker for sound (connected to PB5)     |
+| OLED Display            | 1.5-inch OLED, 128x64 pixels, communicates via I2C |
+| Push Buttons and Knob   | OK, SW-A, SW-B push buttons, adjustable knob    |
+
+- ## **Step-down** : HW-360 V6.0
+<img src = "https://github.com/LEST0808/POP32ph/blob/main/Stepdown.png" width = "400">
 
 ### Specification
-- Input voltage: DC 4.0 ~ 38V                                                             
-- Output voltage: DC 1.25V ~ 36V continuously adjustable 
-- Output current: max 5A, 
-- Output power: up to 75W
-- Voltmeter error: ± 0.05V
-- Measure range: 0 ~ 40V 
-- Conversion efficiency: up to 96%
-- Load regulation: S (I) ≤ 0.8%
-- Voltage Regulation: S (u) ≤ 0.8%
+
+#### Input
+
+| Specification           | Value                                  |
+|-------------------------|----------------------------------------|
+| Input voltage           | DC 4.0 ~ 38V                           |
+
+#### Output
+
+| Specification           | Value                                  |
+|-------------------------|----------------------------------------|
+| Output voltage          | DC 1.25V ~ 36V continuously adjustable |
+| Output current          | Max 5A                                 |
+| Output power            | Up to 75W                              |
+
+#### Measurements
+
+| Specification           | Value                                  |
+|-------------------------|----------------------------------------|
+| Voltmeter error         | ± 0.05V                               |
+| Measure range           | 0 ~ 40V                               |
+
+#### Performance
+
+| Specification           | Value                                  |
+|-------------------------|----------------------------------------|
+| Conversion efficiency   | Up to 96%                              |
+| Load regulation         | S (I) ≤ 0.8%                           |
+| Voltage Regulation      | S (u) ≤ 0.8%                           |
 
 <br><br>
 ### Our robot wiring diagram 
