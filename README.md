@@ -88,6 +88,17 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 | Maximum torque    | 500g.cm   |
 | Angle speed       | 60°/0.12s |
 
+<br><br>
+
+- ## **Gearbox** : Technic, gear differential with inner tabs and closed center, 28 bevel teeth
+<image src = "https://github.com/LEST0808/Sunflower-Photos/blob/main/Gear_3.png" width = "400">
+
+<br><br>
+
+- ## **Wheel** : Lego 49.5 × 20 tire and 30 × 20 rim
+<image src = "https://github.com/LEST0808/Sunflower-Photos/blob/main/Wheel.png" width = "400">
+
+<br><br>
 
 - ## **Ultra sonic sensor** : Gravity URM 09 ultrasonic distance sensor.
 <image src="https://github.com/LEST0808/POP32ph/blob/main/117270007.png" width = "400">
