@@ -296,7 +296,7 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 We have developed two programs for our upcoming competition. Each program is designed for a different round - the qualification round and the final round. The first program includes two subprograms that are also included in the program for the final round. Each subprogram is made up of a main program and a function. 
 
 ### First Section [qualification round]
-```
+```c++
 #include "Mapf.h"
 #include <Servo.h>
 #include <PID_v2.h>
