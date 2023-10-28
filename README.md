@@ -35,7 +35,7 @@ Here are the team members.
 # **Part 2: Robot design.**
 ### The Robot
 
-Designing a good robot is indeed a challenging task as it requires a lot of consideration and planning to ensure it can move swiftly and follow specific rules. One of the primary requirements is that the robot must be a four-wheeled vehicle with one driving axle and one steering actuator, which is why we carefully chose these components. After selecting all the necessary components, we had to figure out how to make them all fit together. For instance, we placed the compass around the middle-top of the robot to get the most accurate output, while the camera was positioned at the back-top to detect objects quickly.
+Designing a good robot is indeed a challenging task as it requires a lot of consideration and planning to ensure it can move swiftly and follow specific rules. One of the primary requirements is that the robot must be a four-wheeled vehicle with one driving axle and one steering actuator, which is why we carefully chose these components. After selecting all the necessary components, we had to figure out how to make them all fit together. For instance, we placed the gyro around the middle-top of the robot to get the most accurate output, while the camera was positioned at the back-top to detect objects quickly.
 
 We also included a separate button to start the program quickly and avoid accidentally moving the robot while trying to push the start button. Our robot has two servos, one on the bottom front and one on the top front. The bottom front servo is used to steer the wheel, and we had to remake the front part of the robot because we faced a problem during the national round. The robot was too slim, and when we steered too much, it acted like a brake, making it difficult to maneuver. So, we made the robot slightly larger to prevent this issue.
 
@@ -296,9 +296,7 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 We have developed two programs for our upcoming competition. Each program is designed for a different round - the qualification round and the final round. The first program includes two subprograms that are also included in the program for the final round. Each subprogram is made up of a main program and a function. 
 
 ### First Section [qualification round]
-
 ### Second Section [qualification round]
-
 ### Third Section [qualification round]
-
+### Third Section [qualification round]
 ### Function [qualification round]
