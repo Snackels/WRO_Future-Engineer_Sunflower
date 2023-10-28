@@ -352,5 +352,8 @@ int x = 1;
 ```
 In this section, we use the library we included earlier which is PID_v2. This is how we keep the robot walking straight. It uses the compass to control the robot to turn left or right to prevent crashing the wall. And then, the part ```Int x = 1; ``` is how the robot walk on both side without crashing. The x = 1 is a variable which we use to multiply later in our program.
 ### Third Section [qualification round]
+```c++
+
+```
 ### Third Section [qualification round]
 ### Function [qualification round]
