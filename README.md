@@ -296,20 +296,9 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 We have developed two programs for our upcoming competition. Each program is designed for a different round - the qualification round and the final round. The first program includes two subprograms that are also included in the program for the final round. Each subprogram is made up of a main program and a function. 
 
 ### First Section [qualification round]
-In the first section or before void setup in our program, we declare all the libraries and variables that we will be using in the program. The libraries that we use include POP32.h, which is the library for our controller, PID_V2.h, which is for PID (Proportional-Integral-Derivative controller), and Mapf.h, which provides floating-point reading from function mapf() and changes any ADC resolution input reading to any voltage output with mapf_ADC(). The variables declared include Gyro variable, Ultrasonic pin, Light sensor pin, Button pin, and field config that does not represent any pin. These variables will be used in the program later.
 
- ### Second Section [qualification round]
-In the second section, which is void setup, we put the program to 0 or reset the robot to where we want it to be before we run void loop. Next, we declare pinMode to input or output. Inputs are the data we receive, such as ultrasonic data, which checks the wall and returns how far it is from the wall. Outputs are for components such as servos, where we send data out so that the component can perform the action that we send out. However, in this case, the POP32.h library already declares all of those (motor and servo), so we don't have to declare them again. After we reset everything, we put the switch program so that it starts when we push the program. The switch program works in a simple way: when we push the button, the button receives the data (input), and then it starts doing the command we give next.
+### Second Section [qualification round]
 
- ### Third Section [qualification round]
-In the third section(void loop), we begin with using some emojis and emoticons. This is an essential part of the program as it can help boost the programmer's brainpower. If you don't believe me, you can take a look at the program. It can be found on line 48 of the code, Link to the program --> "https://github.com/Snackels/WRO_Future-Engineer_Sunflower/blob/main/Robot/Code/no%20obstacle/No-object.ino." The next part involves obtaining data from the IMU, which is similar to fetching data from a compass. However, if you can't locate the 'get_IMU' function in our program, don't be surprised. The coder might have changed its name to 'get_BURRITO' for some inexplicable reason, possibly due to hunger. Now, joking aside, we have the 'motor_and_steer' function in the formula, which looks like this:
-
-#### ((1 * s) * compassPID.Run((pvYaw * s) + ((wall_distance - 25) * 2) * ((float(TURN == 'TURN') - 0.2) * 2)));
-
-In this formula, 's' is actually a variable that multiplies with '1.' What is 's'? It's essentially a numerical value that changes depending on the color of the line the robot detects first. For instance, if it sees a blue line first, the 's' variable becomes -1, making the entire formula negative. You might be wondering why we need this - it's to ensure that the robot faces the same way on both sides.
-
-Now, about 'compassPID,' 'wall_distance,' and 'pvYaw' - they are all components that help the robot stay in the middle of the race field. We multiply 'pvYaw' and 's' together to calculate the precise center of the field. 'pvYaw' represents the robot's position along the x-axis. The compass provides three variables - Yaw, Roll, and Pitch, each representing a different axis. In our case, we're interested in the x-axis, which is why we use 'Yaw.'
-
-Lastly, let's talk about the 'line count' program. This program counts 12 lines and predicts when the robot needs to stop based on a timer. The timer starts counting when the robot crosses the 12th line. And that's it for the 'void loop' function!
+### Third Section [qualification round]
 
 ### Function [qualification round]
