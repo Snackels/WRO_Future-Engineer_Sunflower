@@ -296,6 +296,14 @@ The weight of the vehicle must not exceed 1.5 kilograms.
 We have developed two programs for our upcoming competition. Each program is designed for a different round - the qualification round and the final round. The first program includes two subprograms that are also included in the program for the final round. Each subprogram is made up of a main program and a function. 
 
 ### First Section [qualification round]
+```
+#include "Mapf.h"
+#include <Servo.h>
+#include <PID_v2.h>
+#include <POP32.h>
+```
+In our program, we begin by including several libraries. One such library is Mapf.h, which extends the Arduino map() function and provides floating point reading from function mapf() and changes any ADC resolution input reading to any voltage output with mapf_ADC(). Another library we include is servo.h, which enables our controller boards to control a variety of servo motors. This library is capable of controlling a great number of servos. Additionally, we use PID_v2.h, which is a PID controller that seeks to keep some input variable close to a desired setpoint by adjusting an output. The way in which it does this can be 'tuned' by adjusting three parameters (P, I, D). Lastly, we require POP32.h, which is our custom controller library. We need these libraries to be able to write an Arduino code into this controller.
+
 ### Second Section [qualification round]
 ### Third Section [qualification round]
 ### Third Section [qualification round]
