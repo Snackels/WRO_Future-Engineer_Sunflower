@@ -388,4 +388,48 @@ This is the Void Setup part of our program. On the first line it is where we sta
 <br><br>
 
 ### Third Section [qualification round]
+```c++
+void loop() {
+  // ultra_servo(0, 'R');
+  //servo(5,'R');
+  //ultra_servo(0, 'R');
+  // float wall_distance = getDistance();
+  // Serial.println(wall_distance);
+  // getTaco();
+  // Serial.println(pvYaw);
+  //(❁´◡`❁);
+  motor(4, 20);
+  delay(400);
+  motor(4, 100);
+  while (analogRead(BUTTON) > 500) {
+    getTaco();
+    line_detection();
+    int wall_distance = getDistance();
+    motor_and_steer((1 * x) * compassPID.Run((x * pvYaw) + ((wall_distance - 15.5) * 1.2) * ((float(TURN == 'TURN') - 0.5) * 2)));
+    ultra_servo(-pvYaw, TURN);
+    if (count >= 12) {
+      long timer01 = millis();
+      while (millis() - timer01 < 1000) {
+        getTaco();
+        line_detection();
+        motor_and_steer((1 * x) * compassPID.Run((x * pvYaw) + ((wall_distance - 15.5) * 1.2) * ((float(TURN == 'TURN') - 0.5) * 2)));
+        ultra_servo(-pvYaw, TURN);
+      }
+      motor(4, 0);
+      while (true) {
+      }
+    }
+    // motor_and_steer(-1 * compassPID.Run(-pvYaw + ((wall_distance - 25) * 1) * ((float(TURN == 'R') - 0.5) * 2)));
+    // ultra_servo(-pvYaw,'TURN');
+  }
+  motor(4, 0);
+  while (analogRead(BUTTON) <= 500)
+    ;
+  while (analogRead(BUTTON) > 500)
+    ;
+  while (analogRead(BUTTON) <= 500)
+    ;
+}
+```
+We will start with the ```motor(4,20);```, it's the code which we use to start the motor, the number 4 indicates which motor we want to use in this case we put the motor wire in motor port 4. We started off at speed 20 to avoid the robot front wheel floating, we started with speed 20 for 400 milliseccond. After that we go to the speed 100 on the code ```motor(4,100):```. Next line is stared with the button, if the button is pressed the robot will get IMU from the function ```getTaco``` then it will start detecting the line with ```line_detection``` function. After that, the code ```int wall_distance = getDistance(); ``` is used to get the distance between the wall and robot, the ```getDistance();``` is a function we use to measure the distance with ultrasonic. The ```motor and steer``` part is used to calculate the right steering degree using the x variable we set in second section and the distance between the wall. the ultrasonic will turn into the wall once we cross the red or blue line. And if the robot crossed 12 lines it will start counting with timer for 1000 millisecond or 1 second. Then the robot will get IMU, turn to right degree and then it will stop.
 ### Function [qualification round]
