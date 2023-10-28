@@ -345,9 +345,12 @@ int count = 0;
 
 ### Second Section [qualification round]
 ```c++
+PID_v2 compassPID(0.75, 0, 0.035, PID::Direct);
 
+int x = 1;
 
 ```
+In this section, we use the library we included earlier which is PID_v2. This is how we keep the robot walking straight. It uses the compass to control the robot to turn left or right to prevent crashing the wall. And then, the part ```c++ Int x = 1; ``` is how the robot walk on both side without crashing. the X = 1 is a variable which we use to multiply later in function part.
 ### Third Section [qualification round]
 ### Third Section [qualification round]
 ### Function [qualification round]
