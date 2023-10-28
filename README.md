@@ -350,10 +350,42 @@ PID_v2 compassPID(0.75, 0, 0.035, PID::Direct);
 int x = 1;
 
 ```
-In this section, we use the library we included earlier which is PID_v2. This is how we keep the robot walking straight. It uses the compass to control the robot to turn left or right to prevent crashing the wall. And then, the part ```Int x = 1; ``` is how the robot walk on both side without crashing. The x = 1 is a variable which we use to multiply later in our program.
+In this section, we use the library we included earlier which is PID_v2. This is how we keep the robot walking straight. It uses the compass to control the robot to turn left or right to prevent crashing the wall. And then, the part ```Int x = 1; ``` is how the robot walk on both side without crashing. The x = 1 is a variable which we use to multiply later in our program. 
 ### Third Section [qualification round]
 ```c++
-
+void setup() {
+  compassPID.Start(0, 0, 0);
+  compassPID.SetOutputLimits(-180, 180);
+  compassPID.SetSampleTime(10);
+  // pinMode(BUZZER, OUTPUT);
+  //pinMode(ENB, OUTPUT);
+  //pinMode(INB, OUTPUT);
+  pinMode(STEER_SRV, OUTPUT);
+  pinMode(ULTRA_SRV, OUTPUT);
+  pinMode(ULTRA_PIN, INPUT);
+  pinMode(RED_SEN, INPUT);
+  pinMode(BLUE_SEN, INPUT);
+  pinMode(BUTTON, INPUT);
+  Serial.begin(115200);
+  // while (Serial)
+  //   ;
+  // servo1.attach(STEER_SRV, 600, 2400);
+  // servo2.attach(ULTRA_SRV, 600, 2400);
+  steering_servo(0);
+  ultra_servo(0, 'L');
+  // Serial.print("Button: ");
+  // Serial.println(analogRead(BUTTON));
+  //check_leds();
+  while (analogRead(3) > 500)
+    ;
+  zeroYaw();
+  while (analogRead(3) <= 500)
+    ;
+}
 ```
+This is the Void Setup part of our program. On the first line it is where we start the PID on earlier section. And then, ```SetOutputLimit``` is where we set the limit of compass, normally compass can turn at 360 degrees. Now, we change it -180 to 180 degrees which make it easier to control. Next line ```SetSampleTime``` defines how often the PID controller will perform its calculations and apply control actions. In our code, we set it to 10. The ```pinMode``` is an Arduino function that is used to configure the behavior of a specific pin on an Arduino board. We set servos as output, ultrasonic as input, sensors as input, and button as input. ```Serial.begin(115200)``` function is a commonly used instruction in Arduino programming. It is used to initialize serial communication between the Arduino board and a connected computer or another device. And the steering and ultra servo part are 0 because when we started the program, we need the servos to get in place for start. Then, the part of ```analogRead(3)```, its our button, when the analogRead(3) more than 500 mean the button is being push then the compass will set into zero yaw or if the button is not being pushed the robot will do nothing.
+
+<br><br>
+
 ### Third Section [qualification round]
 ### Function [qualification round]
