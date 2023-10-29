@@ -507,7 +507,7 @@ bool getTaco() {
   return false;
 }
 ```
-- **Description**: This function is used to get data from the IMU (Inertial Measurement Unit). It processes incoming data in a specific format, extracts yaw information, and ensures it stays within a defined range. It returns `true` when it successfully processes valid data and `false` otherwise.
+- **Description**: This function is used to get data from the IMU (Inertial Measurement Unit). It processes incoming data in a specific format, extracts yaw information, and ensures it stays within a defined range. It returns `true` when it successfully processes valid data and `false` otherwise. You may wonder why we named this function getTaco. Well, it's because our programmer got very hungry, and then he saw the Taco Bell in the food delivery app, so he named it.
 
 ### `min`
 ```c++
