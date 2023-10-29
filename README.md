@@ -643,4 +643,40 @@ void check_leds() {
   }
 }
 ```
-This is all the function of our program. Let's start with first functionn, ```zeroyaw```. The zeroyaw function is for our compass, everytime the robot runs the compass will have a different degree which make it harder for next time we run. This function reset it, we added it infrot of program when we started, it will return to 0. Next, let's talk about ```wrapValue```, this function ensures that the value remains within the given minimum and maximum bounds. If the value goes beyond these bounds, it "wraps around" to the other end of the range. Then the ```getTaco``` is a fuction which we use to get IMU. This function is used to process incoming data in a specific format, extracting yaw information and ensuring it remains within a defined range. It returns true when it successfully processes a valid data package and false otherwise. The ```min``` function, this function takes two floating-point numbers a and b as input and returns the smaller of the two. After that, we have function ```wrap```, it uses the variable we set earlier which is x. This function is used to ensure that a floating-point value x remains within a specified range defined by min and max. If x goes outside this range, it wraps around to the other end of the range until it's within the bounds. ```
+This is all the function of our program.
+
+### `zeroyaw`
+- **Description**: This function is for the compass, used to reset the compass to 0 degrees. It's essential to ensure consistent behavior each time the robot runs.
+
+### `wrapValue`
+- **Description**: Ensures that a value remains within specified minimum and maximum bounds. If the value exceeds these bounds, it wraps around to the other end of the range.
+
+### `getTaco`
+- **Description**: This function is used to get data from the IMU (Inertial Measurement Unit). It processes incoming data in a specific format, extracts yaw information, and ensures it stays within a defined range. It returns `true` when it successfully processes valid data and `false` otherwise.
+
+### `min`
+- **Description**: Takes two floating-point numbers, `a` and `b`, as input and returns the smaller of the two.
+
+### `wrap`
+- **Description**: Ensures that a floating-point value `x` we set in the second section stays within a specified range defined by `min` and `max`. If `x` goes outside this range, it wraps around to the other end until it's within the bounds.
+
+### `max`
+- **Description**: A simple utility function for finding the maximum value between two floating-point numbers. It returns the larger of the two values.
+
+### `getDistance`
+- **Description**: This function is used to measure the distance between the wall and the robot using an ultrasonic sensor. It provides a simple way to obtain distance data.
+
+### `ultra_servo`
+- **Description**: This function controls a servo motor's position based on the desired degree and the mode_steer parameter, which determines the middle degree position. It ensures that the servo's position is within the valid range for servo control.
+
+### `steering_servo`
+- **Description**: This function controls a servo motor's position based on the desired degree. It ensures that the servo's position is within a valid range for servo control.
+
+### `motor_and_steer`
+- **Description**: This function takes a degree value, clamps it within a specified range, and controls both the steering and motor. The steering servo is controlled based on the clamped degree, and the motor_steer value is set based on the absolute degree.
+
+### `line_detection`
+- **Description**: This function is responsible for detecting lines and making decisions about steering behavior and the TURN mode based on sensor readings and timing.
+
+### `check_leds`
+- **Description**: This function is used for checking reflection light on the field. Since each field may have different brightness levels, it is essential to continuously monitor and report sensor readings from the blue and red sensors. Additionally, this function calls the `line_detection` function to make real-time decisions based on sensor data.
