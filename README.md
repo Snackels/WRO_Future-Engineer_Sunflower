@@ -433,3 +433,214 @@ void loop() {
 ```
 We will start with the ```motor(4,20);```, it's the code which we use to start the motor, the number 4 indicates which motor we want to use in this case we put the motor wire in motor port 4. We started off at speed 20 to avoid the robot front wheel floating, we started with speed 20 for 400 milliseccond. After that we go to the speed 100 on the code ```motor(4,100):```. Next line is stared with the button, if the button is pressed the robot will get IMU from the function ```getTaco``` then it will start detecting the line with ```line_detection``` function. After that, the code ```int wall_distance = getDistance(); ``` is used to get the distance between the wall and robot, the ```getDistance();``` is a function we use to measure the distance with ultrasonic. The ```motor and steer``` part is used to calculate the right steering degree using the x variable we set in second section and the distance between the wall. the ultrasonic will turn into the wall once we cross the red or blue line. And if the robot crossed 12 lines it will start counting with timer for 1000 millisecond or 1 second. Then the robot will get IMU, turn to right degree and then it will stop.
 ### Function [qualification round]
+```c++
+void zeroYaw() {
+  Serial1.begin(115200);
+  delay(100);
+  // Sets data rate to 115200 bps
+  Serial1.write(0XA5);
+  delay(10);
+  Serial1.write(0X54);
+  delay(100);
+  // pitch correction roll angle
+  Serial1.write(0XA5);
+  delay(10);
+  Serial1.write(0X55);
+  delay(100);
+  // zero degree heading
+  Serial1.write(0XA5);
+  delay(10);
+  Serial1.write(0X52);
+  delay(100);
+  // automatic mode
+}
+int wrapValue(int value, int minValue, int maxValue) {
+  int range = maxValue - minValue + 1;
+  if (value < minValue) {
+    value += range * ((minValue - value) / range + 1);
+  }
+  return minValue + (value - minValue) % range;
+}
+bool getTaco() {
+  while (Serial1.available()) {
+    rxBuf[rxCnt] = Serial1.read();
+    if (rxCnt == 0 && rxBuf[0] != 0xAA) return;
+    rxCnt++;
+    if (rxCnt == 8) {  // package is complete
+      rxCnt = 0;
+      if (rxBuf[0] == 0xAA && rxBuf[7] == 0x55) {  // data package is correct
+        pvYaw = (int16_t)(rxBuf[1] << 8 | rxBuf[2]) / 100.f;
+        // pvPitch = (int16_t)(rxBuf[3] << 8 | rxBuf[4]) / 100.f;
+        // pvRoll = (int16_t)(rxBuf[5] << 8 | rxBuf[6]) / 100.f;
+        pvYaw = wrapValue(pvYaw + compass_offset, -179, 180);
+        return true;
+      }
+    }
+  }
+  return false;
+}
+float min(float a, float b) {
+  if (a >= b) {
+    return b;
+  } else {
+    return a;
+  }
+}
+float wrap(float x, float min, float max) {
+  while (x > max || x < min) {
+    if (x > max) {
+      x = x - abs(max - min);
+    }
+    if (x < min) {
+      x = x + abs(max - min);
+    }
+  }
+  return x;
+}
+float max(float a, float b) {
+  if (a <= b) {
+    return b;
+  } else {
+    return a;
+  }
+}
+float getDistance() {
+  return min(mapf(analogRead(ULTRA_PIN), 0, 4096, 0, 400), 50);
+  //return (wrap(analogRead(ULTRA_PIN), 0, 50));
+}
+
+void ultra_servo(int degree, char mode_steer) {
+  int middle_degree = 0;
+  if (mode_steer == 'F') {
+    middle_degree = 90;
+  } else if (mode_steer == 'R') {
+    middle_degree = 0;
+  } else if (mode_steer == 'L' || mode_steer == 'U') {
+    middle_degree = 180;
+  } else {
+    //(❁´◡`❁);
+    }
+  Servo_Value = ((max(min(middle_degree + degree, 180), 0)) / 2);
+  servo(5, Servo_Value);
+}
+
+void steering_servo(int degree) {
+  SteerServo_Value = ((90 + max(min(degree, 50), -50)) / 2);
+  servo(2, SteerServo_Value);
+}
+
+void motor_and_steer(int degree) {
+  degree = max(min(degree, 45), -45);
+  steering_servo(degree);
+  motor_steer = (map(abs(degree), 0, 45, 40, 40));
+}
+
+
+void line_detection() {
+  int wall_distance = getDistance();
+  int blue_value = analogRead(BLUE_SEN);
+  if (TURN == 'U') {
+    int red_value = analogRead(RED_SEN);
+    if (blue_value < 1200 || red_value < 600) {
+      int lowest_red_sen = red_value;
+      long timer_line = millis();
+      while (millis() - timer_line < 100) {
+        int red_value = analogRead(RED_SEN);
+        if (red_value < lowest_red_sen) {
+          lowest_red_sen = red_value;
+        }
+      }
+      if (lowest_red_sen > 600) {
+        // Blue
+        TURN = 'L';
+        compass_offset += 90;
+        x = 1;
+        // motor_and_steer(-1 * compassPID.Run(-pvYaw + ((wall_distance - 25) * 1) * ((float(TURN == 'R') - 0.5) * 2)));
+        // ultra_servo(-pvYaw,'R');
+      } else {
+        // Red
+        TURN = 'R';
+        compass_offset -= 90;
+        x = -1;
+        // motor_and_steer(1 * compassPID.Run(pvYaw + ((wall_distance - 25) * 1) * ((float(TURN == 'L') - 0.5) * 2)));
+        // ultra_servo(-pvYaw,'L');
+      }
+      halt_detect_line_timer = millis();
+      count++;
+    }
+  } else {
+    if (millis() - halt_detect_line_timer > 1000) {
+      if (blue_value < 1200) {
+        if (TURN == 'R') {
+          compass_offset -= 90;
+        // motor_and_steer(1 * compassPID.Run(pvYaw + ((wall_distance - 25) * 1) * ((float(TURN == 'L') - 0.5) * 2)));
+        // ultra_servo(-pvYaw,'L');
+        } else {
+          compass_offset += 90;
+        // motor_and_steer(-1 * compassPID.Run(-pvYaw + ((wall_distance - 25) * 1) * ((float(TURN == 'R') - 0.5) * 2)));
+        // ultra_servo(-pvYaw,'R');
+        }
+        halt_detect_line_timer = millis();
+        count++;
+      }
+    }
+  }
+}
+
+// void line_detection() {
+//   int blue_value = analogRead(BLUE_SEN);
+//   if (TURN == 'U') {
+//     int red_value = analogRead(RED_SEN);
+//     if (blue_value < 1800 || red_value < 2300) {
+//       int lowest_red_sen = red_value;
+//       long timer_line = millis();
+//       while (millis() - timer_line < 100) {
+//         int red_value = analogRead(RED_SEN);
+//         if (red_value < lowest_red_sen) {
+//           lowest_red_sen = red_value;
+//         }
+//       }
+//       if (lowest_red_sen > 800) {
+//         // Red
+//         TURN = 'L';
+//         compass_offset += 90;
+//         // beep();
+//       } else {
+//         // Blue
+//         TURN = 'R';
+//         compass_offset -= 90;
+//         // beep();
+//         // delay(100);
+//         // beep();
+//         // delay(100);
+//         // beep();
+//       }
+//       halt_detect_line_timer = millis();
+//       count++;
+//     }
+//   } else {
+//     if (millis() - halt_detect_line_timer >= 1000) {
+//       if (blue_value < 900) {
+//         if (TURN == 'R') {
+//           compass_offset -= 90;
+//         } else {
+//           compass_offset += 90;
+//         }
+//         halt_detect_line_timer = millis();
+//         count++;
+//       }
+//     }
+//   }
+// }
+
+void check_leds() {
+  while (true) {
+    Serial.print("Blue: ");
+    Serial.print(analogRead(BLUE_SEN));
+    Serial.print("   Red: ");
+    Serial.println(analogRead(RED_SEN));
+    line_detection();
+  }
+}
+```
+This is all the function of our program. Let's start with first functionn, ```zeroyaw```. The zeroyaw function is for our compass, everytime the robot runs the compass will have a different degree which make it harder for next time we run. This function reset it, we added it infrot of program when we started, it will return to 0. Next, let's talk about ```wrapValue```, this function ensures that the value remains within the given minimum and maximum bounds. If the value goes beyond these bounds, it "wraps around" to the other end of the range. Then the ```getTaco``` is a fuction which we use to get IMU. This function is used to process incoming data in a specific format, extracting yaw information and ensuring it remains within a defined range. It returns true when it successfully processes a valid data package and false otherwise. The ```min``` function, this function takes two floating-point numbers a and b as input and returns the smaller of the two. After that, we have function ```wrap```, it uses the variable we set earlier which is x. This function is used to ensure that a floating-point value x remains within a specified range defined by min and max. If x goes outside this range, it wraps around to the other end of the range until it's within the bounds. ```
