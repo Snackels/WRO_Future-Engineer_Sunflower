@@ -327,8 +327,8 @@ int const ULTRA_SRV = 5;
 int const ULTRA_PIN = 2;
 
 //  Light Sensors
-int const RED_SEN = 0;
-int const BLUE_SEN = 1;
+int const RED_SEN = 1;
+int const BLUE_SEN = 0;
 
 //  Button
 int const BUTTON = 3;
@@ -399,7 +399,7 @@ As for analogRead(3), it corresponds to our button. When the value obtained from
 
 <br><br>
 
-### Third Section [qualification round]
+### Fourth Section [qualification round]
 ```c++
 void loop() {
   //(❁´◡`❁);
@@ -663,3 +663,176 @@ void check_leds() {
 }
 ```
 - **Description**: This function is used for checking reflection light on the field. Since each field may have different brightness levels, it is essential to continuously monitor and report sensor readings from the blue and red sensors. Additionally, this function calls the `line_detection` function to make real-time decisions based on sensor data.
+
+
+
+
+
+### First Section [Final Round]
+```c++
+#include <POP32.h>
+#include "Mapf.h"
+#include <PID_v2.h>
+#include <Pixy2I2C.h>
+Pixy2I2C pixy;
+```
+The first three library are still the same, but we added new library. It's Pixy. It gives us ability to use the Pixy camera so that we can use it to avoid obstacles. And the next line is the declared Pixy, it's for the program so that it will know we have Pixy.
+
+```c++
+long pixy_timer;
+//Compass variable
+float pvYaw, pvRoll, pvPitch;
+uint8_t rxCnt = 0, rxBuf[8];
+//Ultrasonic
+int const ULTRA_PIN = 2;
+// Light Sensors
+int const RED_SEN = 1;
+int const BLUE_SEN = 0;
+//button
+int const BUTTON = 3;
+//Field Config
+char TURN = 'U';
+int compass_offset = 0;
+long halt_detect_line_timer;
+bool found_block = false;
+int lines_detect_num = 0;
+int Servo_Value;
+int SteerServo;
+int count = 0;
+// Blocks config
+char Blocks_TURN = 'U';
+float avoidance_degree = 0;
+long timer_block_decay;
+float found_block_factor;
+bool checked_last_block = false;
+char last_block = 'U';
+char before_last_block = 'U';
+bool checked_before_last_block = false;
+//turnaround
+float LastBlock = 20;
+```
+### Second Section [Final Round]
+```c++
+float LastBlock = 20;
+
+int x = 1;
+int y = 35;
+int z = 1;
+int f;
+```
+So in this part, we have ```LastBlock = 20;```, it's for the last block. By the rules if the last box is green we can just walk and finish the mission but if itt's red we need to tur around and go from another way. This variable is for calculating in avoidance degree so that we dont crash into the obstacles or the wall. The ```x``` variable is still the same. But the ```y``` variable is for turning from both side so that it can walk on bothside with the same distace. The variable ```z``` helps with the last red block so that it will turn to the correct side.
+
+### Third Section [Final Round]
+```c++
+void setup() {
+  compassPID.Start(0, 0, 0);
+  compassPID.SetOutputLimits(-180, 180);
+  compassPID.SetSampleTime(10);
+  pinMode(ULTRA_PIN, INPUT);
+  pinMode(RED_SEN, INPUT);
+  pinMode(BLUE_SEN, INPUT);
+  pinMode(BUTTON, INPUT);
+  Serial.begin(115200);
+  pixy.init();
+  // check_leds();
+  steering_servo(0);
+  ultra_servo(0, 'F');
+  while (analogRead(BUTTON) > 500)
+    ;
+  zeroYaw();
+  oled.text(4, 6, "SUNFLOWER");
+  oled.show();
+  while (analogRead(BUTTON) <= 500)
+    ;
+}
+```
+There's nothing to  talk about this section because it's the same with the qualification round 
+
+### Fourth Section [Final Round]
+```c++
+void loop() {
+  long countdown_stop = millis();
+  long ultra_delay;
+  // long uTURN_delay;
+  // long Uturn_delay;
+  while (analogRead(BUTTON) > 500) {
+
+    getTaco();
+    ultra_servo(-pvYaw, TURN);
+    line_detection();
+    float distance_wall = getDistance();
+    if (count == 1) {
+      if (ultra_delay == 0) {
+        ultra_delay = millis();
+        if (distance_wall < 20) {
+          distance_wall = y;
+        } else {
+          distance_wall = getDistance();
+        }
+      }
+      if (millis() - ultra_delay > 500) {
+        distance_wall = getDistance();
+        count = 0;
+        ultra_delay = 0;
+      }
+    }
+    float steering_degree = (1 * x * z) * compassPID.Run((x * z * pvYaw) + ((distance_wall - y)) * ((float(Blocks_TURN == 'TURN') - 0.5) * 2));
+    if (millis() - pixy_timer > 50) {
+      avoidance_degree = calculate_avoidance();
+      pixy_timer = millis();
+    }
+    int final_degree = map(max(found_block, found_block_factor), 1, 0, mapf(min(max(distance_wall, 5), 30), 5, 30, steering_degree, -1.515 * avoidance_degree), steering_degree);
+    while (lines_detect_num == 7) {
+      if ((millis() - halt_detect_line_timer > 10 && millis() - halt_detect_line_timer < 300) && lines_detect_num == 7 && !checked_before_last_block) {
+        // Stops everything
+        if (before_last_block == 'R') {
+          LastBlock = LastBlock * 1;
+        } else if (before_last_block == 'L') {
+          LastBlock = LastBlock * -1;
+        } else  {
+          LastBlock = LastBlock * 1;
+        }
+        checked_before_last_block = true;
+      }
+      if ((millis() - halt_detect_line_timer > 1500 && millis() - halt_detect_line_timer < 1700) && lines_detect_num == 7 && !checked_last_block) {
+        if (last_block == 'R') {
+          f = 1;
+          steering_servo(avoidance_degree * LastBlock);
+          motor(4, 50);
+          delay(800);
+          if (TURN == 'L') {
+            TURN = 'R';
+            compass_offset -= 180;
+          } else {
+            TURN = 'L';
+            compass_offset += 180;
+          }
+          checked_last_block = true;
+          lines_detect_num += 2;
+          break;
+        }
+      } else {
+        break;
+      }
+    }
+    if (millis() - countdown_stop > 1500) {
+      motor(4, 0);
+      while (true)
+        ;
+    }
+    if (lines_detect_num < 12) {
+      countdown_stop = millis();
+    }
+    motor_and_steer(final_degree);
+  }
+  motor(4, 0);
+  while (analogRead(BUTTON) <= 500)
+    ;
+  while (analogRead(BUTTON) > 500)
+    ;
+  while (analogRead(BUTTON) <= 500)
+    ;
+}
+```
+
+### Function Section [Final Round]
