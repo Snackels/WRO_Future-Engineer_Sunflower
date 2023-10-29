@@ -383,7 +383,19 @@ void setup() {
     ;
 }
 ```
-This is the Void Setup part of our program. On the first line it is where we start the PID on earlier section. And then, ```SetOutputLimit``` is where we set the limit of compass, normally compass can turn at 360 degrees. Now, we change it -180 to 180 degrees which make it easier to control. Next line ```SetSampleTime``` defines how often the PID controller will perform its calculations and apply control actions. In our code, we set it to 10. The ```pinMode``` is an Arduino function that is used to configure the behavior of a specific pin on an Arduino board. We set servos as output, ultrasonic as input, sensors as input, and button as input. ```Serial.begin(115200)``` function is a commonly used instruction in Arduino programming. It is used to initialize serial communication between the Arduino board and a connected computer or another device. And the steering and ultra servo part are 0 because when we started the program, we need the servos to get in place for start. Then, the part of ```analogRead(3)```, its our button, when the analogRead(3) more than 500 mean the button is being push then the compass will set into zero yaw or if the button is not being pushed the robot will do nothing.
+This section corresponds to the "Void Setup" part of our program. In the first line, we initialize the PID (Proportional-Integral-Derivative) controller that we set up in an earlier section.
+
+The next step is to use the SetOutputLimit function, which allows us to define the compass's limits. Typically, a compass can rotate 360 degrees. However, we modify this range to -180 to 180 degrees, making it easier to control.
+
+Following that, we use the SetSampleTime function to specify how frequently the PID controller will perform its calculations and apply control actions. In our code, we've configured it to run every 10 units of time.
+
+The subsequent lines involve using the pinMode function, which is a fundamental part of Arduino programming. It's used to configure the behavior of specific pins on an Arduino board. In our case, we set the servos as output, the ultrasonic sensor as input, the sensors as input, and the button as input.
+
+The Serial.begin(115200) function is a standard instruction in Arduino programming. It initializes serial communication between the Arduino board and a connected computer or another device.
+
+The "steering" and "ultra servo" parts are set to 0 because, at the program's start, we need the servos to be in their initial positions before any movement.
+
+As for analogRead(3), it corresponds to our button. When the value obtained from analogRead(3) is greater than 500, it indicates that the button has been pressed. In response, the compass is set to a zero yaw position. If the button is not pressed, the robot remains in its current state without making any adjustments.
 
 <br><br>
 
