@@ -390,13 +390,6 @@ This is the Void Setup part of our program. On the first line it is where we sta
 ### Third Section [qualification round]
 ```c++
 void loop() {
-  // ultra_servo(0, 'R');
-  //servo(5,'R');
-  //ultra_servo(0, 'R');
-  // float wall_distance = getDistance();
-  // Serial.println(wall_distance);
-  // getTaco();
-  // Serial.println(pvYaw);
   //(❁´◡`❁);
   motor(4, 20);
   delay(400);
@@ -506,7 +499,6 @@ float max(float a, float b) {
 }
 float getDistance() {
   return min(mapf(analogRead(ULTRA_PIN), 0, 4096, 0, 400), 50);
-  //return (wrap(analogRead(ULTRA_PIN), 0, 50));
 }
 
 void ultra_servo(int degree, char mode_steer) {
@@ -586,52 +578,6 @@ void line_detection() {
     }
   }
 }
-
-// void line_detection() {
-//   int blue_value = analogRead(BLUE_SEN);
-//   if (TURN == 'U') {
-//     int red_value = analogRead(RED_SEN);
-//     if (blue_value < 1800 || red_value < 2300) {
-//       int lowest_red_sen = red_value;
-//       long timer_line = millis();
-//       while (millis() - timer_line < 100) {
-//         int red_value = analogRead(RED_SEN);
-//         if (red_value < lowest_red_sen) {
-//           lowest_red_sen = red_value;
-//         }
-//       }
-//       if (lowest_red_sen > 800) {
-//         // Red
-//         TURN = 'L';
-//         compass_offset += 90;
-//         // beep();
-//       } else {
-//         // Blue
-//         TURN = 'R';
-//         compass_offset -= 90;
-//         // beep();
-//         // delay(100);
-//         // beep();
-//         // delay(100);
-//         // beep();
-//       }
-//       halt_detect_line_timer = millis();
-//       count++;
-//     }
-//   } else {
-//     if (millis() - halt_detect_line_timer >= 1000) {
-//       if (blue_value < 900) {
-//         if (TURN == 'R') {
-//           compass_offset -= 90;
-//         } else {
-//           compass_offset += 90;
-//         }
-//         halt_detect_line_timer = millis();
-//         count++;
-//       }
-//     }
-//   }
-// }
 
 void check_leds() {
   while (true) {
