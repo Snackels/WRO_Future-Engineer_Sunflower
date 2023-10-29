@@ -424,8 +424,20 @@ void loop() {
     ;
 }
 ```
-We will start with the ```motor(4,20);```, it's the code which we use to start the motor, the number 4 indicates which motor we want to use in this case we put the motor wire in motor port 4. We started off at speed 20 to avoid the robot front wheel floating, we started with speed 20 for 400 milliseccond. After that we go to the speed 100 on the code ```motor(4,100):```. Next line is stared with the button, if the button is pressed the robot will get IMU from the function ```getTaco``` then it will start detecting the line with ```line_detection``` function. After that, the code ```int wall_distance = getDistance(); ``` is used to get the distance between the wall and robot, the ```getDistance();``` is a function we use to measure the distance with ultrasonic. The ```motor and steer``` part is used to calculate the right steering degree using the x variable we set in second section and the distance between the wall. the ultrasonic will turn into the wall once we cross the red or blue line. And if the robot crossed 12 lines it will start counting with timer for 1000 millisecond or 1 second. Then the robot will get IMU, turn to right degree and then it will stop.
+We begin with the code snippet motor(4, 20). This code is used to initiate the motor. The number "4" indicates the motor port in which the motor wire is connected. We set the initial speed to 20 for a duration of 400 milliseconds to prevent the robot's front wheel from drifting. After this, we increase the speed to 100 using the code motor(4, 100).
+
+The next step starts with a button press. When the button is pressed, the robot retrieves data from the IMU (Inertial Measurement Unit) through the function getTaco. Subsequently, the robot begins line detection using the line_detection function.
+
+To determine the distance between the robot and the wall, we use the code int wall_distance = getDistance(). The function getDistance employs an ultrasonic sensor to measure this distance.
+
+The section involving "motor and steer" is responsible for calculating the appropriate steering degree based on the variable "x" defined in the earlier section and the distance from the wall. When the robot crosses a red or blue line, the ultrasonic sensor adjusts its position to align with the wall.
+
+If the robot crosses 12 lines, a timer is initiated for 1000 milliseconds (1 second). During this time, the robot acquires IMU data, turns to the correct degree, and then comes to a halt.
 ### Function [qualification round]
+
+This is all the function of our program.
+
+### `zeroyaw`
 ```c++
 void zeroYaw() {
   Serial1.begin(115200);
@@ -447,6 +459,11 @@ void zeroYaw() {
   delay(100);
   // automatic mode
 }
+```
+- **Description**: This function is for the compass, used to reset the compass to 0 degrees. It's essential to ensure consistent behavior each time the robot runs.
+
+### `wrapValue`
+```c++
 int wrapValue(int value, int minValue, int maxValue) {
   int range = maxValue - minValue + 1;
   if (value < minValue) {
@@ -454,6 +471,11 @@ int wrapValue(int value, int minValue, int maxValue) {
   }
   return minValue + (value - minValue) % range;
 }
+```
+- **Description**: Ensures that a value remains within specified minimum and maximum bounds. If the value exceeds these bounds, it wraps around to the other end of the range.
+
+### `getTaco`
+```c++
 bool getTaco() {
   while (Serial1.available()) {
     rxBuf[rxCnt] = Serial1.read();
@@ -472,6 +494,11 @@ bool getTaco() {
   }
   return false;
 }
+```
+- **Description**: This function is used to get data from the IMU (Inertial Measurement Unit). It processes incoming data in a specific format, extracts yaw information, and ensures it stays within a defined range. It returns `true` when it successfully processes valid data and `false` otherwise.
+
+### `min`
+```c++
 float min(float a, float b) {
   if (a >= b) {
     return b;
@@ -479,6 +506,11 @@ float min(float a, float b) {
     return a;
   }
 }
+```
+- **Description**: Takes two floating-point numbers, `a` and `b`, as input and returns the smaller of the two.
+
+### `wrap`
+```c++
 float wrap(float x, float min, float max) {
   while (x > max || x < min) {
     if (x > max) {
@@ -490,6 +522,11 @@ float wrap(float x, float min, float max) {
   }
   return x;
 }
+```
+- **Description**: Ensures that a floating-point value `x` we set in the second section stays within a specified range defined by `min` and `max`. If `x` goes outside this range, it wraps around to the other end until it's within the bounds.
+
+### `max`
+```c++
 float max(float a, float b) {
   if (a <= b) {
     return b;
@@ -497,10 +534,19 @@ float max(float a, float b) {
     return a;
   }
 }
+```
+- **Description**: A simple utility function for finding the maximum value between two floating-point numbers. It returns the larger of the two values.
+
+### `getDistance`
+```c++
 float getDistance() {
   return min(mapf(analogRead(ULTRA_PIN), 0, 4096, 0, 400), 50);
 }
+```
+- **Description**: This function is used to measure the distance between the wall and the robot using an ultrasonic sensor. It provides a simple way to obtain distance data.
 
+### `ultra_servo`
+```c++
 void ultra_servo(int degree, char mode_steer) {
   int middle_degree = 0;
   if (mode_steer == 'F') {
@@ -515,19 +561,30 @@ void ultra_servo(int degree, char mode_steer) {
   Servo_Value = ((max(min(middle_degree + degree, 180), 0)) / 2);
   servo(5, Servo_Value);
 }
+```
+- **Description**: This function controls a servo motor's position based on the desired degree and the mode_steer parameter, which determines the middle degree position. It ensures that the servo's position is within the valid range for servo control.
 
+### `steering_servo`
+```c++
 void steering_servo(int degree) {
   SteerServo_Value = ((90 + max(min(degree, 50), -50)) / 2);
   servo(2, SteerServo_Value);
 }
+```
+- **Description**: This function controls a servo motor's position based on the desired degree. It ensures that the servo's position is within a valid range for servo control.
 
+### `motor_and_steer`
+```c++
 void motor_and_steer(int degree) {
   degree = max(min(degree, 45), -45);
   steering_servo(degree);
   motor_steer = (map(abs(degree), 0, 45, 40, 40));
 }
+```
+- **Description**: This function takes a degree value, clamps it within a specified range, and controls both the steering and motor. The steering servo is controlled based on the clamped degree, and the motor_steer value is set based on the absolute degree.
 
-
+### `line_detection`
+```c++
 void line_detection() {
   int wall_distance = getDistance();
   int blue_value = analogRead(BLUE_SEN);
@@ -578,7 +635,11 @@ void line_detection() {
     }
   }
 }
+```
+- **Description**: This function is responsible for detecting lines and making decisions about steering behavior and the TURN mode based on sensor readings and timing.
 
+### `check_leds`
+```c++
 void check_leds() {
   while (true) {
     Serial.print("Blue: ");
@@ -589,40 +650,4 @@ void check_leds() {
   }
 }
 ```
-This is all the function of our program.
-
-### `zeroyaw`
-- **Description**: This function is for the compass, used to reset the compass to 0 degrees. It's essential to ensure consistent behavior each time the robot runs.
-
-### `wrapValue`
-- **Description**: Ensures that a value remains within specified minimum and maximum bounds. If the value exceeds these bounds, it wraps around to the other end of the range.
-
-### `getTaco`
-- **Description**: This function is used to get data from the IMU (Inertial Measurement Unit). It processes incoming data in a specific format, extracts yaw information, and ensures it stays within a defined range. It returns `true` when it successfully processes valid data and `false` otherwise.
-
-### `min`
-- **Description**: Takes two floating-point numbers, `a` and `b`, as input and returns the smaller of the two.
-
-### `wrap`
-- **Description**: Ensures that a floating-point value `x` we set in the second section stays within a specified range defined by `min` and `max`. If `x` goes outside this range, it wraps around to the other end until it's within the bounds.
-
-### `max`
-- **Description**: A simple utility function for finding the maximum value between two floating-point numbers. It returns the larger of the two values.
-
-### `getDistance`
-- **Description**: This function is used to measure the distance between the wall and the robot using an ultrasonic sensor. It provides a simple way to obtain distance data.
-
-### `ultra_servo`
-- **Description**: This function controls a servo motor's position based on the desired degree and the mode_steer parameter, which determines the middle degree position. It ensures that the servo's position is within the valid range for servo control.
-
-### `steering_servo`
-- **Description**: This function controls a servo motor's position based on the desired degree. It ensures that the servo's position is within a valid range for servo control.
-
-### `motor_and_steer`
-- **Description**: This function takes a degree value, clamps it within a specified range, and controls both the steering and motor. The steering servo is controlled based on the clamped degree, and the motor_steer value is set based on the absolute degree.
-
-### `line_detection`
-- **Description**: This function is responsible for detecting lines and making decisions about steering behavior and the TURN mode based on sensor readings and timing.
-
-### `check_leds`
 - **Description**: This function is used for checking reflection light on the field. Since each field may have different brightness levels, it is essential to continuously monitor and report sensor readings from the blue and red sensors. Additionally, this function calls the `line_detection` function to make real-time decisions based on sensor data.
