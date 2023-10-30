@@ -834,5 +834,105 @@ void loop() {
     ;
 }
 ```
-We will start with ```countdown_stop```, it is used to initialize a variable with the current value of the millis. ```ultra_delay``` is used for timing and controlling delays of ultrasonic. And then the function ```getTaco```, ```line_detection```,  and ```getDistance``` are the same
+We will start with ```countdown_stop```, it is used to initialize a variable with the current value of the millis. ```ultra_delay``` is used for timing and controlling delays of ultrasonic. And then the function ```getTaco``` for get IMU, ```line_detection``` to detect color lines,  and ```getDistance``` to measure the distance between the wall and the robot. And the code:   
+```c++
+if (count == 1) {
+      if (ultra_delay == 0) {
+        ultra_delay = millis();
+        if (distance_wall < 20) {
+          distance_wall = y;
+        } else {
+          distance_wall = getDistance();
+        }
+      }
+      if (millis() - ultra_delay > 500) {
+        distance_wall = getDistance();
+        count = 0;
+        ultra_delay = 0;
+      }
+    }
+```
+This code checks whether `count` is equal to 1 and `ultra_delay` is 0. If both conditions are met, it records the current time in `ultra_delay`. Depending on the value of `distance_wall`, it either sets it to `y` or retrieves the actual distance using the `getDistance` function. The code for `steering_degree` is computed using a PID controller and various variables set earlier in the second section. These variables are weighted and scaled to determine the final steering angle, or degree.
+
+Additionally, we have an `if (millis() - pixy_timer > 50) {` statement, which ensures that `avoidance_degree` is recalculated and updated at regular intervals of at least 50 milliseconds. The next line calculates `final_degree` by adjusting the robot's steering based on `distance_wall`, `steering_degree`, and `avoidance_degree`.
+
+Moving on, when `lines_detect_num` is equal to 7, the code checks if the robot has passed a line seven times. If it has, the robot begins checking the last obstacle. If the last box is red, the robot turns back and takes an alternate route to complete the mission. If the last box is green, it turns left and continues the mission as usual.
+
+Lastly, if the robot passes 12 lines, it concludes the mission by using a timer, stopping inside the box."
+
 ### Function Section [Final Round]
+So in the function part, almost everything are the same. But we added a few thing. 
+### `calculate_avoidance`
+```c++
+float calculate_avoidance() {
+  int blocks = pixy.ccc.getBlocks();
+
+  found_block = false;
+
+  if (blocks) {
+    int signature = -1;
+    int targetHeight = 10;
+    float focalLength = 2.3;
+    float cameraFOV = 80.0;
+
+    int largestBlockIndex = -1;
+    int largestBlockArea = 0;
+
+    for (int i = 0; i < blocks; i++) {
+      if (pixy.ccc.blocks[i].m_height > 1.33 * float(pixy.ccc.blocks[i].m_width)) {
+        int objectArea = pixy.ccc.blocks[i].m_width;
+        found_block = true;
+        if (objectArea > largestBlockArea) {
+          largestBlockIndex = i;
+          largestBlockArea = objectArea;
+          signature = pixy.ccc.blocks[i].m_signature;
+        }
+      }
+    }
+
+    if (signature != -1) {
+      int objectHeight = pixy.ccc.blocks[largestBlockIndex].m_height;
+      float distance = (targetHeight * focalLength * 100) / objectHeight;
+
+      float blockCenterX = pixy.ccc.blocks[largestBlockIndex].m_x;
+      float blockCenterY = pixy.ccc.blocks[largestBlockIndex].m_y;
+
+      float deltaX = blockCenterX - pixy.frameWidth / 2;
+      float deltaY = blockCenterY - pixy.frameHeight / 2;
+
+      float detected_degree = deltaX * 40 / pixy.frameWidth;
+
+      float blockPositionX = distance * sin(degreesToRadians(detected_degree));
+      float blockPositionY = distance * cos(degreesToRadians(detected_degree)) - 16;
+
+      if (signature == 1) {
+        avoidance_degree = max(radiansToDegree(atan2(blockPositionX + 10.7, blockPositionY)), 6.7);
+        Blocks_TURN = 'TURN';
+        last_block = 'R';
+        before_last_block = 'R';
+      } else {
+        avoidance_degree = min(radiansToDegree(atan2(blockPositionX - 8.5, blockPositionY)), -4.5);
+        last_block = 'L';
+        Blocks_TURN = 'TURN';
+        before_last_block = 'L';
+      }
+    }
+  }
+```
+- **Description**: This function utilizes the Pixy camera data to calculate the robot's optimal steering to avoid obstacles effectively. It plays a crucial role in maintaining the robot's path and avoiding collisions. The code is configured to use a specific signature for red and green obstacles in the Pixymon app.
+
+### `degreesToRadians`
+```c++
+float degreesToRadians(double degrees) {
+  return degrees * PI / 180.0;
+}
+```
+- **Description**: This simple function converts angle measurements between degrees and radians, aiding in angle calculations within the code.
+
+### `radiansToDegree`
+```c++
+float radiansToDegree(double raidans) {
+  return raidans / PI * 180.0;
+}
+```
+- **Description**: This function, as the counterpart to degreesToRadians, converts angles from radians to degrees, facilitating angle calculations.
