@@ -746,7 +746,7 @@ void setup() {
     ;
 }
 ```
-There's nothing to  talk about this section because it's the same with the qualification round 
+There's nothing new to discuss in this section as it mirrors the content covered in the qualification round.
 
 ### Fourth Section [Final Round]
 ```c++
@@ -834,5 +834,5 @@ void loop() {
     ;
 }
 ```
-
+We will start with ```countdown_stop```, it is used to initialize a variable with the current value of the millis. ```ultra_delay``` is used for timing and controlling delays of ultrasonic. And then the function ```getTaco```, ```line_detection```,  and ```getDistance``` are the same
 ### Function Section [Final Round]
