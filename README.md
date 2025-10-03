@@ -10,13 +10,6 @@ by Team *Sunflower* 🌻🌻🌻
 </p>
 <br><br><br><br>
 
-## Our works (Youtube Links): 
-
-
-
-<br>
-
-
 ### This Github repository contains:
 - Team information
 - Design Process
